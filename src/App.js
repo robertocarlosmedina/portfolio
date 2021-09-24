@@ -1,14 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <session>
+        {/* <Header /> */}
+      </session>
+      <session>
+        {/* <AboutMe /> */}
+      </session>
+      <session>
+        {/* <Skills /> */}
+      </session>
+      <session>
+        {/* <LifeJourney /> */}
+      </session>
+      <session>
+        {/* <Services /> */}
+      </session>
+      <session>
+        {/* <Projects /> */}
+      </session>
+      <session>
+        {/* <Card /> */}
+      </session>
+      <session>
+        {/* <ContactMe /> */}
+      </session>
+      <session>
+        {/* <Floor /> */}
+      </session>
     </div>
   );
 }
 
 export default App;
+ 
