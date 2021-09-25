@@ -5,12 +5,16 @@
   --object-therth-color:#252525;
   --subtitle-color:#8D8D8D;
   --primary-button-color:#1611FF;
-  --font-type:Robot;
+  --font-type:Roboto;
+  --border-color:#151515;
+  --color-text:#ffffff;
+  --icon-normal-size:1.5rem;
+  --icon-big-size:2rem;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

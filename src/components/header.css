@@ -1,0 +1,63 @@
+.Header{
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    border: 1px  solid var(--border-color);
+    color: var(--color-text);
+}
+.HeaderComponents{
+    position: relative;
+    display: inline-block;
+    margin-top: .30rem;
+}
+/* username */
+.HeaderComponents .Username{
+    float: left;
+    margin-right: max(40rem, 20rem);
+    margin-top: -.4rem;
+}
+.Username h1{
+    position: absolute;
+    font-size: 1.5rem;
+    margin-left:3rem;
+    color: var(--color-text);
+    text-decoration: none;
+    text-underline-offset: none;
+}
+/* links to the navegation */
+.Links{
+    float: right;
+    margin-left: 8rem;
+    margin-right: 2rem ;
+}
+.Links ul li{
+    display: inline-block;
+    margin-right: 2rem;
+    text-decoration: none;
+    color:var(--white-letter)
+}
+#navLink{
+    text-decoration: none;
+    color:var(--white-letter)
+}
+.Links ul li:hover{
+    color: var(--object-primary-color);
+    font-style: bold;
+    cursor:pointer;
+}
+
+.HeaderIcon{
+    position: relative;
+    float: right;
+    margin: -2.05rem 3rem 0rem 50rem;
+    margin-right: min(3rem, 1.5rem);
+}
+
+#ThemeIcon{
+    width: var(--icon-normal-size);
+    height: var(--icon-normal-size);
+    margin-top: -1.10rem;
+    
+    /* margin-left: max(58rem,8rem); */
+
+}
