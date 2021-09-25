@@ -4,7 +4,7 @@ import './frontPage.css'
 
 const FrontPage = () =>{
     return (
-        <div classname="Frontpage">
+        <div className="Frontpage">
             {/* <h1>dhdhkdk</h1> */}
             {/* <div className="Box">box</div> */}
         </div>

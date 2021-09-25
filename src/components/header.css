@@ -40,8 +40,12 @@
     text-decoration: none;
     color:var(--white-letter)
 }
+#activeNavLink{
+    text-decoration: none;
+    color:var(--object-secundary-color)
+}
 .Links ul li:hover{
-    color: var(--object-primary-color);
+    color: var(--object-secundary-color);
     font-style: bold;
     cursor:pointer;
 }
@@ -53,11 +57,110 @@
     margin-right: min(3rem, 1.5rem);
 }
 
-#ThemeIcon{
+.ThemeIcon{
     width: var(--icon-normal-size);
     height: var(--icon-normal-size);
     margin-top: -1.10rem;
-    
+    color:var(--color-text);
+    cursor:pointer;
     /* margin-left: max(58rem,8rem); */
+}
+.ThemeIcon:hover{
+    color: var(--object-secundary-color);
+}
+#menuIcon{
+    display: none;
+}
+.MobileMenu{
+    position: absolute;
+    width: 100%;
+    height: 8rem;
+    display: none;
+    bottom: 0;
+    background-color: var(--dark-background);
+    border: 1px solid var(--border-color);
+}
+.MobileMenu ul{
+    margin-left: -1.5rem;
+    margin-top: 2rem;
+}
+.MobileMenu ul li{
+    list-style: none;
+    display: inline-flex;
+}
+.MobileMenu ul li div p{
+    margin-top:-.09rem;
+}
+.MenuButton{
+    width: 4rem;
+    height: 4rem;
+    color:var(--color-text);
+    margin: .15rem;
+}
+.MenuButton:hover{
+    color:var(--object-secundary-color);
+}
 
+.closeIcon{
+    position: absolute;
+    margin-left: 35vh;
+    margin-top: -2rem;
+}
+
+
+/*  Media query */
+@media screen and (max-width: 650px) {
+    .Header{
+        bottom: 0;
+        height: 2.5rem;
+    }
+    .Links{
+        display: none;
+    }
+    .HeaderComponents .Username{
+        position: relative;
+        margin: -1.2rem 45rem 0rem 0rem;
+        font-size: .55rem;
+    }
+    .HeaderComponents .Username h1{
+        font-size: 1.15rem;
+    }
+    #menuIcon{
+        display: block;
+        float:right;
+        margin-top: -.6rem;
+        margin-right: 1.5rem;
+    }
+    .HeaderIcon{
+        position: absolute;
+        margin: -.1rem 5rem 0rem 35rem;
+        margin-left: 80%;
+        left: 0;
+    }
+    .MobileMenu{
+        display: block;
+    }
+}
+@media screen and (max-width: 420px) {
+    .HeaderIcon{
+        margin-left: 70%;
+    }
+    .HeaderComponents .Username h1{
+        margin-left: .5rem;
+    }
+}
+@media screen and (max-width: 240px) {
+    .HeaderIcon{
+        margin-left: 60%;
+    }
+}
+
+@media screen and (max-width: 388px) {
+    .MobileMenu{
+        height: 12rem;
+    }
+    .closeIcon{
+        margin-left: max(5rem, 3rem);
+        margin-top: -2.5rem;
+    }
 }
