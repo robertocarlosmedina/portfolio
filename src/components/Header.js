@@ -48,6 +48,7 @@ const Header = () =>{
         active: false
       }
   ])
+  const [openMenu, setOpenMenu] = useState(false)
   const [themeIcons, setThemeIcons] = useState([
       { 
         name:"Dark",
@@ -114,10 +115,16 @@ const Header = () =>{
     setThemeIcons(newthemeInstance)
     // console.log(navcomponents)
   }
+  const openMobileMenu = () =>{
+    setOpenMenu(true)
+  }
+  const closeMobileMenu = () =>{
+    setOpenMenu(false)
+  }
   return (
     <div>
       <div className="Header">
-        <div className="HeaderComponents">
+        {!openMenu && <div className="HeaderComponents">
           <div className="Username">
             <h1 onClick={unselecteAll}>
                 <NavLink to={"/"} id="navLink">
@@ -138,18 +145,28 @@ const Header = () =>{
               ))}
             </ul>
           </div>  
-        </div>
-          {themeIcons.map((ico, i) => (
-              <div className="HeaderIcon" key={i}>
-                  {ico.active && <ico.icon 
-                      className="ThemeIcon" 
-                      onClick={themeSwitcher}
-                  />}
-              </div>
-          ))}
-          <TiThMenu className="ThemeIcon" id="menuIcon"/>
+        </div>}
+          {!openMenu && <div>
+            {themeIcons.map((ico, i) => (
+                <div className="HeaderIcon" key={i}>
+                    {ico.active && <ico.icon 
+                        className="ThemeIcon" 
+                        onClick={themeSwitcher}
+                    />}
+                </div>
+            ))}
+          </div>}
+          {!openMenu && <TiThMenu className="ThemeIcon" 
+                    id="menuIcon"
+                    onClick={openMobileMenu}
+          />}
       </div>
-      <div className="MobileMenu">
+      {openMenu && <div className="MobileMenu">
+        <div>
+          <RiCloseFill className="ThemeIcon closeIcon"
+            onClick={closeMobileMenu}  
+          />
+        </div>
         <ul>
           {navcomponents.map((navItem, i) => (
             <li key={i} onClick={navLinkLselected}>
@@ -164,8 +181,7 @@ const Header = () =>{
             </li>
           ))}
         </ul>
-        <RiCloseFill className="ThemeIcon closeIcon" />
-      </div>
+      </div>}
     </div>
   )
 }

@@ -76,13 +76,13 @@
     width: 100%;
     height: 8rem;
     display: none;
-    bottom: 0;
+    bottom: -.25rem;
     background-color: var(--dark-background);
     border: 1px solid var(--border-color);
 }
 .MobileMenu ul{
     margin-left: -1.5rem;
-    margin-top: 2rem;
+    margin-top: 3.5rem;
 }
 .MobileMenu ul li{
     list-style: none;
@@ -102,9 +102,10 @@
 }
 
 .closeIcon{
-    position: absolute;
     margin-left: 35vh;
-    margin-top: -2rem;
+    padding-top: 3rem;
+    padding-right: 1rem;
+    float: right;
 }
 
 
@@ -139,6 +140,11 @@
     }
     .MobileMenu{
         display: block;
+        height: 8rem;
+    }
+    .closeIcon{
+        margin-left: max(9rem, 3rem);
+        margin-top: -1.5rem;
     }
 }
 @media screen and (max-width: 420px) {
@@ -149,11 +155,6 @@
         margin-left: .5rem;
     }
 }
-@media screen and (max-width: 240px) {
-    .HeaderIcon{
-        margin-left: 60%;
-    }
-}
 
 @media screen and (max-width: 388px) {
     .MobileMenu{
@@ -162,5 +163,11 @@
     .closeIcon{
         margin-left: max(5rem, 3rem);
         margin-top: -2.5rem;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    .HeaderIcon{
+        margin-left: 60%;
     }
 }
