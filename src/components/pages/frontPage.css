@@ -6,6 +6,7 @@
 }
 /* presentation texts animations */
 .PresentationComponents{
+    z-index: -1;
     position: absolute;
     margin-top: 25vh;
     margin-left: 16vh;
@@ -16,6 +17,10 @@
     font-weight: 600;
     font-size: 3rem;
     font-style:bold;
+}
+.secondHeader{
+    width: 100%;
+    text-align: left;
 }
 .PresentationComponents h2{
     margin-top: -1.5rem;
@@ -28,22 +33,24 @@
 #contactButton{
     position: absolute;
     width: 7.5rem;
+    margin-top: 1rem;
     text-align: center;
     background-color: var(--primary-button-color);
     text-decoration: none;
     border-radius: 10px;
     color:var(--color-text);
+    border: 1px solid transparent;
 }
 #contactButton:hover{
     color: var(--object-secundary-color);
-    border: 1px solid var(--object-primary-color);
+    border: 1px solid var(--border-color-2);
 }
 
 /* images display style */
 .FrontAnimation{
     position:absolute;
     margin-top: 30vh;
-    margin-left: 130vh;
+    margin-left: 60%;
 }
 .FrontAnimation #primaryLosangle,
 .FrontAnimation #secondLosangle,
@@ -87,7 +94,7 @@
 /* contacts icons styling */
 .Contacts{
     position: absolute;
-    margin-left: 75rem;
+    margin-left: 87%;
     margin-top: 34vh;
     width: 5rem;
 }
@@ -106,6 +113,35 @@
 .Contacts ul li a #contactIcons{
     width: 2rem;
     height: 2rem;
+}
+/* Scroll show style */
+.ScrollShow{
+    position: absolute;
+    margin-top: 84vh;
+    margin-left: 45%;
+    color: var(--object-primary-color);
+    animation: scroolAnimatedIcon infinite 0.4s linear;
+    cursor: pointer;
+}
+.ScrollShow ul li{
+    list-style: none;
+    display: inline-flex;
+    padding: .55rem;
+}
+.ScrollShow ul li p{
+    color:var(--color-text);
+}
+.ScrollShow ul li #iconScroll{
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -.6rem;
+    margin-left: -.7rem;
+}
+.ScrollShow ul li #iconScroll:hover,
+.ScrollShow ul li p:hover, .ScrollShow:hover{
+    color: var(--object-secundary-color);
+    animation: none;
 }
 
 /* Keyframes to animate the image display */
@@ -132,4 +168,152 @@
   to {
       margin-top: 40vh;
   }
+}
+@keyframes scroolAnimatedIcon {
+    from {
+      margin-top: 84vh;
+    }
+    to {
+        margin-top: 84.3vh;
+    }
+  }
+
+/* Media querys */
+@media screen and (max-width: 1066px) {
+    .PresentationComponents{
+        margin-left: 10vh;
+    }
+    .PresentationComponents h1{
+        font-size: 2rem;
+    }
+    .secondHeader{
+        margin-top: 1.8rem;
+        width:60%;
+    }
+    .FrontAnimation #primaryLosangle{
+        width: 14rem;
+        height: 14rem;
+    }
+    .ProfileImage{
+        width: 16rem;
+        height: 16rem;
+    }
+    .FrontAnimation #secondLosangle{
+        width: 10rem;
+        height: 10rem;
+        margin-top: 20vh;
+        margin-left: 2.1rem;
+    }
+    .FrontAnimation #thertLosangle{
+        width: 6rem;
+        height: 6rem;
+        margin-top: 38vh;
+        margin-left: 4.1rem;
+    }
+    .Contacts{
+        margin-top: 28.5vh;
+    }
+    .ScrollShow{
+        margin-left: 40%;
+    }
+
+
+    /* Animations */
+    @keyframes upDownAnimation-3 {
+        from {
+          margin-top: 38vh;
+        }
+        to {
+            margin-top: 40vh;
+        }
+      }
+}
+
+@media screen and (max-width: 776px) {
+    .FrontAnimation{
+        display: none;
+    }
+    .Contacts{
+        margin-left: 80%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .PresentationComponents .PresentationText{
+        display: none;
+    }
+    #contactButton{
+        margin-top: -.5rem;
+    }
+    .FrontAnimation{
+        margin-top: 10vh;
+        margin-left: 36%;
+        display: block;
+    }
+    .FrontAnimation #primaryLosangle{
+        width: 9rem;
+        height: 9rem;
+    }
+    .ProfileImage{
+        width: 11rem;
+        height: 11rem;
+    }
+    .FrontAnimation #secondLosangle{
+        width: 6rem;
+        height: 6rem;
+        margin-top: 13vh;
+        margin-left: 1.5rem;
+    }
+    .FrontAnimation #thertLosangle{
+        width: 3rem;
+        height: 3rem;
+        margin-top: 27vh;
+        margin-left: 3rem;
+    }
+    .Contacts{
+        width: 10rem;
+        margin-top: 5vh;
+        margin-left: -5%;
+    }
+    .PresentationComponents{
+        margin-top: 50vh;
+    }
+
+    .ScrollShow{
+        display: none;
+    }
+    /* Animation */
+    @keyframes upDownAnimation-2 {
+        from {
+          margin-top: 13vh;
+        }
+        to {
+            margin-top: 16vh;
+        }
+      }
+    @keyframes upDownAnimation-3 {
+      from {
+        margin-top: 27vh;
+      }
+      to {
+          margin-top: 30vh;
+      }
+    }
+}
+@media screen and (max-width: 380px) {
+    .Contacts{
+        display: none;
+    }
+    .FrontAnimation{
+        margin-left: 25%;
+    }
+    .PresentationComponents{
+        margin-left: 5vh;
+    }
+    .PresentationComponents h1{
+        font-size: 1.45rem;
+    }
+    .secondHeader{
+        width: 90%;
+    }
 }

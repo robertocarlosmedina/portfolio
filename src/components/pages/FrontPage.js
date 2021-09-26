@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaLinkedin, FaGithubSquare,FaWhatsappSquare } from 'react-icons/fa'
+import { BiMouse } from 'react-icons/bi'
+import { IoIosArrowDown } from 'react-icons/io'
 
 import ProfileImage from '../../assets/images/perfil.png'
 import './frontPage.css'
@@ -28,7 +30,7 @@ const FrontPage = () =>{
       <div className="Frontpage">
           <div className="PresentationComponents">
             <h1>Hello, I'm Roberto</h1>
-            <h2>Software Engineering and Telecommunications Student</h2>
+            <div className="secondHeader"><h2>Software Engineering and Telecommunications Student</h2></div>
             <div className="PresentationText">
               <p>High level of software development, leading throughout its 
                  life cycle, from the development of the back-end to the 
@@ -58,6 +60,13 @@ const FrontPage = () =>{
                   </a>
                 </li>
               ))}
+            </ul>
+          </div>
+          <div className="ScrollShow">
+            <ul>
+                <li><BiMouse id="iconScroll"/></li>
+                <li><p>Scroll down</p></li>
+                <li><IoIosArrowDown id="iconScroll"/></li>
             </ul>
           </div>
       </div>
