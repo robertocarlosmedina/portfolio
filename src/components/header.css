@@ -168,3 +168,8 @@
         margin-left: 60%;
     }
 }
+@media screen and (max-width: 216px) {
+    .MobileMenu{
+        height: 18rem;
+    }
+}
