@@ -61,8 +61,11 @@ const Header = () =>{
         active: false
       }
   ])
+  // This function is to control what off the nav links is open
+  // to add a diferente color on it
   const navLinkLselected = (event) =>{
     const newComponentsInstance = []
+    // console.log(event.target)
     navcomponents.map((item, i) =>{
         if(item.name === event.target.text){
             item.active = true
@@ -82,6 +85,8 @@ const Header = () =>{
     setNavcomponents(newComponentsInstance)
     // console.log(navcomponents)
   }
+  // This is when you click on the home button it reset the nav
+  // links to defaul
   const unselecteAll = () =>{
     const newComponentsInstance = []
     navcomponents.map((item) => {
@@ -96,6 +101,7 @@ const Header = () =>{
     setNavcomponents(newComponentsInstance)
     // console.log(navcomponents)
   }
+  // To control the icons occording to the theme in use
   const themeSwitcher = () =>{
     const newthemeInstance = []
     themeIcons.map((icon, i) =>{
@@ -115,16 +121,18 @@ const Header = () =>{
     setThemeIcons(newthemeInstance)
     // console.log(navcomponents)
   }
+  // To oppen the Mobile navegation Menu
   const openMobileMenu = () =>{
     setOpenMenu(true)
   }
+  // To Close the Mobile Menu
   const closeMobileMenu = () =>{
     setOpenMenu(false)
   }
   return (
     <div>
       <div className="Header">
-        {!openMenu && <div className="HeaderComponents">
+       <div className="HeaderComponents">
           <div className="Username">
             <h1 onClick={unselecteAll}>
                 <NavLink to={"/"} id="navLink">
@@ -145,8 +153,8 @@ const Header = () =>{
               ))}
             </ul>
           </div>  
-        </div>}
-          {!openMenu && <div>
+        </div>
+          <div>
             {themeIcons.map((ico, i) => (
                 <div className="HeaderIcon" key={i}>
                     {ico.active && <ico.icon 
@@ -155,7 +163,7 @@ const Header = () =>{
                     />}
                 </div>
             ))}
-          </div>}
+          </div>
           {!openMenu && <TiThMenu className="ThemeIcon" 
                     id="menuIcon"
                     onClick={openMobileMenu}
@@ -169,14 +177,16 @@ const Header = () =>{
         </div>
         <ul>
           {navcomponents.map((navItem, i) => (
-            <li key={i} onClick={navLinkLselected}>
-                <div className="MenuButton">
-                    <NavLink to={`${navItem.linkTo}`} 
-                             id={`${navItem.id}`}
-                    >
-                      <navItem.icon className="ThemeIcon"/>
-                      <p>{navItem.name}</p>
-                    </NavLink>
+            <li key={i} >
+                <div className="MenuButton" >
+                  <navItem.icon id={`${navItem.id}`} alt={`${navItem.name}`}/>
+                  <br />
+                  <NavLink to={`${navItem.linkTo}`} 
+                           id={`${navItem.id}`}
+                           onClick={navLinkLselected}
+                  >
+                    {navItem.name}
+                  </NavLink>
                 </div>
             </li>
           ))}
