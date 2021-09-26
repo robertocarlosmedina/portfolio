@@ -1,11 +1,135 @@
 .Frontpage{
     width: 100%;
     height: 100vh;
+    font-family: 'Ubuntu', 'Serif';
     /* background-color: rgb(13, 13, 216); */
 }
+/* presentation texts animations */
+.PresentationComponents{
+    position: absolute;
+    margin-top: 25vh;
+    margin-left: 16vh;
+    color:var(--color-text);
+    text-align: left;
+}
+.PresentationComponents h1{
+    font-weight: 600;
+    font-size: 3rem;
+    font-style:bold;
+}
+.PresentationComponents h2{
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+}
+.PresentationComponents .PresentationText{
+    width: 65vh;
+    height: 15vh;
+}
+#contactButton{
+    position: absolute;
+    width: 7.5rem;
+    text-align: center;
+    background-color: var(--primary-button-color);
+    text-decoration: none;
+    border-radius: 10px;
+    color:var(--color-text);
+}
+#contactButton:hover{
+    color: var(--object-secundary-color);
+    border: 1px solid var(--object-primary-color);
+}
 
-.Box{
-    width: 80%;
-    height: 5rem;
-    background-color: chartreuse;
+/* images display style */
+.FrontAnimation{
+    position:absolute;
+    margin-top: 30vh;
+    margin-left: 130vh;
+}
+.FrontAnimation #primaryLosangle,
+.FrontAnimation #secondLosangle,
+.FrontAnimation #thertLosangle{
+    position: absolute;
+    border-radius: 10%;
+    transform: rotate(45deg);
+}
+.FrontAnimation #primaryLosangle{
+    width: 18rem;
+    height: 18rem;
+    z-index: 4;
+    background-color: var(--object-primary-color);
+    animation: upDownAnimation-1 infinite 2s linear;
+    overflow: hidden;
+}
+.FrontAnimation #secondLosangle{
+    width: 12rem;
+    height: 12rem;
+    z-index: 3;
+    margin-top: 20vh;
+    margin-left: 2.9rem;
+    background-color: var(--object-primary-degra-1);
+    animation: upDownAnimation-2 infinite 2s linear;
+}
+.FrontAnimation #thertLosangle{
+    width: 8rem;
+    height: 8rem;
+    z-index: 2;
+    margin-top: 37vh;
+    margin-left: 4.9rem;
+    background-color: var(--object-primary-degra-2);
+    animation: upDownAnimation-3 infinite 2s linear;
+}
+.ProfileImage{
+    width: 21rem;
+    height: 21rem;
+    transform: rotate(-45deg);
+}
+
+/* contacts icons styling */
+.Contacts{
+    position: absolute;
+    margin-left: 75rem;
+    margin-top: 34vh;
+    width: 5rem;
+}
+.Contacts ul li{
+    list-style: none;
+    display: inline-flex;
+    padding: 1rem;
+}
+.Contacts ul li a{
+    list-style: none;
+    color: var(--object-primary-color);
+}
+.Contacts ul li a:hover{
+    color:var(--object-secundary-color)
+}
+.Contacts ul li a #contactIcons{
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Keyframes to animate the image display */
+@keyframes upDownAnimation-1 {
+    from {
+      margin-top: 0vh;
+    }
+    to {
+        margin-top: -.5vh;
+    }
+  }
+@keyframes upDownAnimation-2 {
+    from {
+      margin-top: 20vh;
+    }
+    to {
+        margin-top: 23vh;
+    }
+  }
+@keyframes upDownAnimation-3 {
+  from {
+    margin-top: 37vh;
+  }
+  to {
+      margin-top: 40vh;
+  }
 }

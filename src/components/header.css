@@ -13,8 +13,8 @@
 /* username */
 .HeaderComponents .Username{
     float: left;
-    margin-right: max(40rem, 20rem);
-    margin-top: -.4rem;
+    margin-right: max(44.5rem, 20rem);
+    margin-top: 0.15rem;
 }
 .Username h1{
     position: absolute;
@@ -27,8 +27,7 @@
 /* links to the navegation */
 .Links{
     float: right;
-    margin-left: 8rem;
-    margin-right: 2rem ;
+    margin-right: max(-13rem, 6rem);
 }
 .Links ul li{
     display: inline-block;
@@ -51,15 +50,15 @@
 }
 
 .HeaderIcon{
-    position: relative;
-    float: right;
-    margin: -2.05rem 3rem 0rem 50rem;
-    margin-right: min(3rem, 1.5rem);
+    position: absolute;
+    margin-top: -2rem;
+    
+    margin-left: 91.5%;
 }
 
 .ThemeIcon{
-    width: var(--icon-normal-size);
-    height: var(--icon-normal-size);
+    width: 1.5rem;
+    height: 1.5rem;
     margin-top: -1.10rem;
     color:var(--color-text);
     cursor:pointer;
@@ -108,6 +107,7 @@
     float: right;
 }
 /*  Media query */
+
 @media screen and (max-width: 650px) {
     .Header{
         bottom: 0;

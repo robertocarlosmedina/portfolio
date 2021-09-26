@@ -15,8 +15,9 @@ function App() {
       <Switch>
         <Route path="/" exact component={FrontPage}/>
         <Route path="/aboutme" exact component={AboutMe}/>
+        <Footer />
       </Switch>
-      <Footer />
+      
         {/* <Header /> */}
         {/* <AboutMe /> */}
         {/* <Skills /> */}
