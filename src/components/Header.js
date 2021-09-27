@@ -81,7 +81,7 @@ const Header = () =>{
             item.active = true
             item.id = "activeNavLink"
             newComponentsInstance.push(item)
-            goToLink(item.name)
+            goToLink(item.name.toLocaleLowerCase())
         }
         else{
             item.active = false
@@ -111,6 +111,7 @@ const Header = () =>{
     // to refresh with the new instance
     setNavcomponents(newComponentsInstance)
     // console.log(navcomponents)
+    goToLink("")
   }
   // To control the icons occording to the theme in use
   const themeSwitcher = () =>{
@@ -145,6 +146,7 @@ const Header = () =>{
   }
   // Controlin y on the windows
   const addNavbarBorder = () =>{
+    // changeLinkCOlorWhileScrolling()
     if(window.scrollY >= 40){
       SetNavBarBorder(true)
     }
@@ -157,7 +159,7 @@ const Header = () =>{
     const newComponentsInstance = []
     // console.log(window.scrollY)
     navcomponents.map((component, i)=>{
-      if(component.position <= window.scrollY){
+      if(component.position <= window.scrollY && !component.position){
         component.active = true
         newComponentsInstance.push(component)
       }
@@ -177,8 +179,13 @@ const Header = () =>{
       <div className={navBarBoarder ? "Header HeaderBorder" : "Header"}>
        <div className="HeaderComponents">
           <div className="Username">
-            <h1 onClick={unselecteAll}>
-                <Link to={"Frontpage"} id="navLink" smooth={true} duration={1000} >
+            <h1>
+                <Link to={"Frontpage"} 
+                      id="navLink" 
+                      smooth={true} 
+                      duration={1000}
+                      onClick={unselecteAll} 
+                >
                   Roberto
                 </Link>
             </h1>
