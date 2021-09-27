@@ -2,10 +2,13 @@
     width: 100%;
     height: 4rem;
     position: fixed;
-    /* border: 1px  solid var(--border-color); */
+    /* margin-top: -1.35rem; */
     color: var(--color-text);
     background-color: var(--dark-background);
     z-index: 10;
+}
+.HeaderBorder{
+    border: 1px  solid var(--border-color);
 }
 .HeaderComponents{
     position: relative;
@@ -17,6 +20,7 @@
     float: left;
     margin-right: max(44.5rem, 20rem);
     margin-top: 0.15rem;
+    cursor: pointer;
 }
 .Username h1{
     position: absolute;
@@ -89,6 +93,7 @@
 .MobileMenu ul li{
     list-style: none;
     display: inline-flex;
+    cursor: pointer;
 }
 .MobileMenu ul li div p{
     margin-top:-.09rem;

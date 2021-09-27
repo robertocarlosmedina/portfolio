@@ -1,5 +1,5 @@
 import React from 'react'
-import {  useHistory } from 'react-router-dom'
+import { Link } from 'react-scroll'
 import { FaLinkedin, FaGithubSquare,FaWhatsappSquare } from 'react-icons/fa'
 import { BiMouse } from 'react-icons/bi'
 import { IoIosArrowDown } from 'react-icons/io'
@@ -8,7 +8,7 @@ import ProfileImage from '../../assets/images/perfil.png'
 import './frontPage.css'
 
 const FrontPage = () =>{
-  const history = useHistory()
+  
     const contactIcons=[
         {
             name:"Linkedin",
@@ -27,12 +27,8 @@ const FrontPage = () =>{
         }
     ]
 
-    const goToContact = () =>{
-      history.push("/aboutme")
-    }
-
     return (
-      <div className="Frontpage">
+      <div className="Frontpage" id="Frontpage">
           <div className="PresentationComponents">
             <h1>Hello, I'm Roberto</h1>
             <div className="secondHeader"><h2>Software Engineering and Telecommunications Student</h2></div>
@@ -43,9 +39,14 @@ const FrontPage = () =>{
               </p>  
             </div>
             <div className="ContactMe">
-              <button onClick={goToContact} id="contactButton">
-                  Contact Me
-              </button>
+              <Link to={"GetInTouch"}
+                    smooth={true} 
+                    duration={1000}
+              >
+                <button id="contactButton">
+                    Contact Me
+                </button>
+              </Link>
             </div>
           </div>
           
@@ -62,7 +63,7 @@ const FrontPage = () =>{
           <div className="Contacts">
             <ul>
               {contactIcons.map((icon, i) =>(
-                <li>
+                <li key={i}>
                   <a href={`${icon.linkTo}`}>
                     <icon.Icon id="contactIcons"/>
                   </a>

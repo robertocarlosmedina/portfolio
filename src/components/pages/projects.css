@@ -1,7 +1,7 @@
-.Footer{
+.Projects{
     /* position: absolute; */
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     font-family: 'Ubuntu', 'Serif';
-    background-color: var(--object-therth-color);
+    background-color: rgb(216, 13, 206);
 }

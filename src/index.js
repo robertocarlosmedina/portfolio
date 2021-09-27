@@ -9,10 +9,10 @@ import ScrollToTop from './components/ScrollToTop'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter> 
       <ScrollToTop />
       <App />
-    </BrowserRouter>
+    </BrowserRouter> 
   </React.StrictMode>,
   document.getElementById('root')
 );
