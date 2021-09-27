@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import {  useHistory } from 'react-router-dom'
 import { FaLinkedin, FaGithubSquare,FaWhatsappSquare } from 'react-icons/fa'
 import { BiMouse } from 'react-icons/bi'
 import { IoIosArrowDown } from 'react-icons/io'
@@ -8,6 +8,7 @@ import ProfileImage from '../../assets/images/perfil.png'
 import './frontPage.css'
 
 const FrontPage = () =>{
+  const history = useHistory()
     const contactIcons=[
         {
             name:"Linkedin",
@@ -26,6 +27,10 @@ const FrontPage = () =>{
         }
     ]
 
+    const goToContact = () =>{
+      history.push("/aboutme")
+    }
+
     return (
       <div className="Frontpage">
           <div className="PresentationComponents">
@@ -34,13 +39,16 @@ const FrontPage = () =>{
             <div className="PresentationText">
               <p>High level of software development, leading throughout its 
                  life cycle, from the development of the back-end to the 
-                 front-end. And also experienced in systems development.
+                 front-end.
               </p>  
             </div>
-            <NavLink to={"/"} id="contactButton">
-              <p>Contact Me </p>
-            </NavLink>
+            <div className="ContactMe">
+              <button onClick={goToContact} id="contactButton">
+                  Contact Me
+              </button>
+            </div>
           </div>
+          
           <div className="FrontAnimation">
             <span id="primaryLosangle">
                 <img src={ProfileImage} 

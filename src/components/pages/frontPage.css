@@ -6,7 +6,7 @@
 }
 /* presentation texts animations */
 .PresentationComponents{
-    z-index: -1;
+
     position: absolute;
     margin-top: 25vh;
     margin-left: 16vh;
@@ -30,16 +30,23 @@
     width: 65vh;
     height: 15vh;
 }
-#contactButton{
+.ContactMe{
     position: absolute;
-    width: 7.5rem;
-    margin-top: 1rem;
+}
+.ContactMe #contactButton{
+    position: absolute;
+    float: right;
+    width: 8rem;
+    height: 3rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     background-color: var(--primary-button-color);
     text-decoration: none;
     border-radius: 10px;
     color:var(--color-text);
     border: 1px solid transparent;
+    cursor: pointer;
 }
 #contactButton:hover{
     color: var(--object-secundary-color);
@@ -239,11 +246,20 @@
 }
 
 @media screen and (max-width: 660px) {
-    .PresentationComponents .PresentationText{
-        display: none;
+    .PresentationComponents h1{
+        margin-top: -1rem;
     }
-    #contactButton{
-        margin-top: -.5rem;
+    .PresentationComponents .PresentationText{
+        width: 95%;
+        margin-top: -1rem;
+        font-size: .75rem;
+    }
+    .secondHeader{
+        font-size: .75rem;
+        width: 100%;
+    }
+    .ContactMe #contactButton{
+        margin-top: -.25rem;
     }
     .FrontAnimation{
         margin-top: 10vh;
@@ -265,14 +281,11 @@
         margin-left: 1.5rem;
     }
     .FrontAnimation #thertLosangle{
-        width: 3rem;
-        height: 3rem;
-        margin-top: 27vh;
-        margin-left: 3rem;
+        display: none;
     }
     .Contacts{
         width: 10rem;
-        margin-top: 5vh;
+        margin-top: 2vh;
         margin-left: -5%;
     }
     .PresentationComponents{
@@ -291,29 +304,39 @@
             margin-top: 16vh;
         }
       }
-    @keyframes upDownAnimation-3 {
-      from {
-        margin-top: 27vh;
-      }
-      to {
-          margin-top: 30vh;
-      }
-    }
 }
+
 @media screen and (max-width: 380px) {
-    .Contacts{
-        display: none;
-    }
-    .FrontAnimation{
-        margin-left: 25%;
-    }
     .PresentationComponents{
         margin-left: 5vh;
     }
+    .ContactMe #contactButton{
+        margin-top: .5rem;
+        height: 2.4rem;
+        font-size: 1rem;
+    }
+    .Contacts{
+        display: none;
+    }
+    /* #contactButton{
+        height: 0.;
+    } */
+    .FrontAnimation{
+        margin-left: 25%;
+    }
     .PresentationComponents h1{
-        font-size: 1.45rem;
+        font-size: 1.5rem;
+    }
+    .PresentationComponents h2{
+        font-size: .65rem;
     }
     .secondHeader{
         width: 90%;
+    }
+}
+@media screen and (max-width: 324px) {
+    .ContactMe #contactButton{
+        height: 2.4rem;
+        font-size: 1rem;
     }
 }
