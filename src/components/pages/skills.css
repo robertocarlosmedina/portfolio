@@ -4,3 +4,46 @@
     height: 100vh;
     font-family: 'Ubuntu', 'Serif';
 }
+.SkillsConteiner{
+    position: absolute;
+    margin-top: 25vh;
+    width: 100%;
+    height: 25rem;
+    text-align: center;
+    color: var(--color-text);
+}
+.SkillsConteiner ul{
+    margin-left: -2rem;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.SkillsConteiner ul li{
+    list-style: none;
+    display: inline-flex;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+.SkillsConteiner ul li img{
+    width: 30px;
+    height: 30px;
+    margin-right: .75rem;
+    margin-top: -.15rem;
+}
+.SkillsConteiner ul li .DropIcon{
+    width: 2rem;
+    height: 2rem;
+    color: var(--object-secundary-color);
+    margin-top: -.3rem;
+    margin-left: .5rem;
+}
+.SkillsConteiner ul li:hover{
+    list-style: none;
+    display: inline-flex;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--object-secundary-color);
+    color: var(--object-secundary-color);
+}
