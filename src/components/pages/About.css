@@ -24,9 +24,10 @@
     position: absolute;
     text-align: center;
     width: 100%;
-    margin-top: 39vh;
+    margin-top: 45vh;
+    color: var(--color-text);
 }
-.AboutmeConteiner div{
+.AboutmeConteiner .Conteiner-1{
     width: 50rem;
     height: 16rem;
     margin-left: auto;
@@ -34,7 +35,15 @@
     border-radius: 1.5rem;
     background-color: var(--object-secundary-color);
 }
-
+.AboutmeConteiner .Conteiner-1 .AboutText{
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    font-size:large;
+    font-size: 1rem;
+    width: 24rem;
+    margin-left: 23rem;
+}
 .AboutmeConteiner .AboutmeImage{
     /* position:absolute; */
     width: 25rem;
@@ -43,16 +52,120 @@
     margin-top: -9rem;
     margin-left: -29rem;
 }
-
-
-
+.AboutmeConteiner .AboutStatistic{
+    position: absolute;
+    margin-left: 22.5rem;
+    margin-top: 4.5rem;
+}
+.AboutmeConteiner .AboutStatistic ul li{
+    list-style: none;
+    display: inline-flex;
+    margin-right: 4.5rem;
+}
+.AboutmeConteiner .AboutStatistic ul li h1{
+    font-size: 1.5rem;
+    margin-left: .15rem;
+}
+.AboutmeConteiner .AboutStatistic ul li p{
+    position: absolute;
+    font-size: .85rem;
+    width: 5rem;
+    margin-top: 3rem;
+    margin-left: -1rem;
+    color: var(--color-text-1);
+}
+.AboutmeConteiner  .CVDownloader{
+    position: absolute;
+    margin-top: 13rem;
+    margin-left: 23rem;
+    cursor: pointer;
+}
+.AboutmeConteiner  .CVDownloader a{
+    width: 9rem;
+    background-color: var(--primary-button-color);
+    color: var(--color-text);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    text-decoration: none;
+}
+.AboutmeConteiner  .CVDownloader a:hover{
+    color: var(--object-secundary-color);
+    border: 1px solid var(--object-secundary-color);
+}
+.AboutmeConteiner .CVDownloader .DownloadIcon{
+    margin-left: .75rem;
+}
 
 /* Media querys */
+
+@media screen and (max-width: 873px) {
+    .AboutMe{
+        background-color: var(--object-secundary-color);
+    }
+    .AboutmeConteiner .Conteiner-1{
+        margin-left: -20rem;
+    }
+    .AboutmeConteiner .AboutmeImage{
+        margin-top: -6.34rem;
+        margin-left: 9.5rem;
+    }
+    .AboutmeConteiner .Conteiner-1 .AboutText{
+        margin-top: -1.45rem;
+        margin-left: 85%;
+        text-align: center;
+    }
+    .AboutmeConteiner .AboutStatistic{
+        margin-left: 87%;
+        margin-top: 5rem;
+    }
+    .AboutmeConteiner  .CVDownloader{
+        margin-top:15rem;
+        margin-left: 102%;
+    }
+}
+@media screen and (max-width: 759px) {
+    .AboutmeConteiner .Conteiner-1{
+        margin-left: -20rem;
+        /* display: none; */
+    }
+    .AboutmeConteiner .AboutmeImage{
+        width: 20rem;
+        height: 20rem;
+        margin-top:-1.34rem;
+        margin-left: 6rem;
+    }
+    .AboutmeConteiner  .CVDownloader{
+        margin-top:15rem;
+        margin-left: 104%;
+    } 
+}
 @media screen and (max-width: 650px) {
     .Title{
         margin-top: 0rem;
     }
     .Title h1{
         font-size: 2rem;
+    }
+    .AboutmeConteiner .AboutmeImage{
+        width: 14rem;
+        height: 14rem;
+        margin-top: 4.64rem;
+        /* bottom: 0; */
+        margin-left: 3.5rem;
+    }
+    .AboutmeConteiner .Conteiner-1 .AboutText{
+        margin-top: -10.5rem;
+        font-size: .95rem;
+        margin-left: 70%;
+        text-align: center;
+    }
+    .AboutmeConteiner .AboutStatistic{
+        margin-left: 75%;
+        margin-top: -6rem;
+    }
+    .AboutmeConteiner  .CVDownloader{
+        margin-top:2rem;
+        margin-left: 95%;
     }
 }
