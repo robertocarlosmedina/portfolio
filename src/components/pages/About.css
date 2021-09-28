@@ -3,5 +3,56 @@
     width: 100%;
     height: 100vh;
     font-family: 'Ubuntu', 'Serif';
-    background-color: rgb(13, 13, 216);
+}
+.Title{
+    position: absolute;
+    width: 100%;
+    margin-top: 4rem;
+}
+.Title h1{
+    font-size: 2.25rem;
+    font-style: bold;
+}
+.Title h2{
+    width: 100%;
+    position: absolute;
+    font-size: .85rem;
+    margin-top: -1.35rem;
+}
+
+.AboutmeConteiner{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-top: 39vh;
+}
+.AboutmeConteiner div{
+    width: 50rem;
+    height: 16rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1.5rem;
+    background-color: var(--object-secundary-color);
+}
+
+.AboutmeConteiner .AboutmeImage{
+    /* position:absolute; */
+    width: 25rem;
+    height: 25rem;
+    bottom: -3rem;
+    margin-top: -9rem;
+    margin-left: -29rem;
+}
+
+
+
+
+/* Media querys */
+@media screen and (max-width: 650px) {
+    .Title{
+        margin-top: 0rem;
+    }
+    .Title h1{
+        font-size: 2rem;
+    }
 }

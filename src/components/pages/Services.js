@@ -5,10 +5,10 @@ import './services.css'
 const Services = () =>{
     return(
       <div className="Services" id="Services">
-        <h1>Services</h1>
-        <h1>Services</h1>
-        <h1>Services</h1>
-        <h1>Services</h1>
+        <div className="Title">
+          <h1>Services</h1>
+          <h2>What I offer</h2>
+        </div>
       </div>
     )
 }

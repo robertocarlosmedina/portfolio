@@ -1,4 +1,4 @@
-import { Component, React, useState }  from 'react'
+import { React, useState }  from 'react'
 import {  useHistory } from 'react-router-dom'
 import { Link } from 'react-scroll'
 import { HiSun } from 'react-icons/hi'
@@ -11,8 +11,10 @@ import { RiFileList3Fill,RiSendPlane2Fill, RiCloseFill } from 'react-icons/ri'
 
 import './header.css'
 
-const Header = () =>{
+const Header = (props) =>{
   const history = useHistory()
+  const [screenYPos, setScreenYPos] = useState(0)
+  // const [inUse, setInuse] = useState(false)
   const [navBarBoarder, SetNavBarBorder] = useState(false)
   const [navcomponents, setNavcomponents] = useState([
       {
@@ -21,7 +23,8 @@ const Header = () =>{
         linkTo:"AboutMe",
         id:"navLink",
         active: false,
-        position:114
+        minposition:114,
+        maxposition:798
       },
       {
         name:"Skills",
@@ -29,7 +32,8 @@ const Header = () =>{
         linkTo:"Skills",
         id:"navLink",
         active: false,
-        position:798
+        minposition:798,
+        maxposition:1254
       },
       {
         name:"Services",
@@ -37,7 +41,8 @@ const Header = () =>{
         linkTo:"Services",
         id:"navLink",
         active: false,
-        position:1254
+        minposition:1254,
+        maxposition:1824
       },
       {
         name:"Projects",
@@ -45,7 +50,8 @@ const Header = () =>{
         linkTo:"Projects",
         id:"navLink",
         active: false,
-        position:1824
+        minposition:1824,
+        maxposition:2480
       },
       {
         name:"Contact",
@@ -53,7 +59,8 @@ const Header = () =>{
         linkTo:"GetInTouch",
         id:"navLink",
         active: false,
-        position:2280
+        minposition:2480,
+        maxposition:3700
       }
   ])
   const [openMenu, setOpenMenu] = useState(false)
@@ -73,7 +80,7 @@ const Header = () =>{
   // This function is to control what off the nav links is open
   // to add a diferente color on it
   const navLinkLselected = (event) =>{
-    // console.log(event)
+    console.log(event)
     const newComponentsInstance = []
     // console.log(event.target)
     navcomponents.map((item, i) =>{
@@ -154,25 +161,12 @@ const Header = () =>{
       SetNavBarBorder(false)
     }
   }
-  const changeLinkCOlorWhileScrolling = () =>{
-    const control = 0
-    const newComponentsInstance = []
-    // console.log(window.scrollY)
-    navcomponents.map((component, i)=>{
-      if(component.position <= window.scrollY && !component.position){
-        component.active = true
-        newComponentsInstance.push(component)
-      }
-      else{
-        component.active = false
-        newComponentsInstance.push(component)
-      }
-      setNavcomponents([])
-      setNavcomponents(newComponentsInstance)
-    })
-    
+  const setpositionY = () =>{
+    setScreenYPos(window.scrollY)
   }
+  console.log(props)
   window.addEventListener('scroll', addNavbarBorder)
+  window.addEventListener('scroll', setpositionY)
   // window.addEventListener('scroll', changeLinkCOlorWhileScrolling)
   return (
     <div>
@@ -195,7 +189,8 @@ const Header = () =>{
               {navcomponents.map((navItem, i) => (
                 <li key={i} >
                     <Link to={`${navItem.linkTo}`} 
-                          id={`${navItem.id}`}
+                          id={screenYPos >= navItem.minposition 
+                            && screenYPos < navItem.maxposition ? "activeNavLink" : `${navItem.id}`}
                           smooth={true} 
                           duration={1000}
                           onClick={navLinkLselected}
@@ -231,18 +226,20 @@ const Header = () =>{
         <ul>
           {navcomponents.map((navItem, i) => (
             <li key={i} >
-                <div className="MenuButton" >
-                  <navItem.icon id={`${navItem.id}`} alt={`${navItem.name}`}/>
-                  <br />
-                  <Link to={`${navItem.linkTo}`} 
+              <Link to={`${navItem.linkTo}`} 
                         id={`${navItem.id}`}
                         onClick={navLinkLselected}
                         smooth={true} 
                         duration={800}
-                  >
+              >
+                <div className="MenuButton" >
+                  <navItem.icon id={`${navItem.id}`} alt={`${navItem.name}`}/>
+                  <br />
+                  
                     {navItem.name}
-                  </Link>
+                  
                 </div>
+              </Link>
             </li>
           ))}
         </ul>

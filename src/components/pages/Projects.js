@@ -5,11 +5,10 @@ import './projects.css'
 const Projects = () =>{
     return(
       <div className="Projects" id="Projects">
-        <h1>Projects</h1>
-        <h1>Projects</h1>
-        <h1>Projects</h1>
-        <h1>Projects</h1>
-        <h1>Projects</h1>
+        <div className="Title">
+          <h1>Projects</h1>
+          <h2>What I have made</h2>
+        </div>
       </div>
     )
 }
