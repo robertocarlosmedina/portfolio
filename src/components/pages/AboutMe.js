@@ -53,13 +53,13 @@ const AboutMe = () =>{
                   <FiDownload  className="DownloadIcon"/>
                 </a>
             </div>
-            <div>
+            <div id="ImagesConteiner">
               <img src={ProfileImage} 
                    alt="profile" 
                    className="AboutmeImage"
               />
             </div>
-          </div>
+            </div>
         </div>
       </div>
     )
