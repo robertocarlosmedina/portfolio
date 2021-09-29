@@ -2,6 +2,9 @@ import  {React, useState} from "react";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft, 
       MdArrowForward } from 'react-icons/md'
 
+
+import Publicity from "./Publicity";
+
 import Voterpy from '../../assets/images/painel/voterpy.png'
 import Algodata from '../../assets/images/painel/algodata.png'
 import Minotroll from '../../assets/images/painel/minotroll.png'
@@ -42,14 +45,17 @@ const Projects = () =>{
     if(currentIndex > 0){
       setCurrentIndex(currentIndex-1)
     }
-    console.log(currentIndex)
+    else if(currentIndex === 0){
+      setCurrentIndex(projects.length-1)
+    }
   }
   const carrosselDisplayRight = () =>{
     if(currentIndex < projects.length-1){
       setCurrentIndex(currentIndex+1)
     }
-    console.log(currentIndex)
-
+    else if(currentIndex === projects.length-1){
+      setCurrentIndex(0)
+    }
   }
   const goTOCarroselPosition = (event) =>{
     // setCurrentIndex(index)
@@ -72,7 +78,22 @@ const Projects = () =>{
           />
           <ul className="ProjectCard">
             <li>
-              <img src={projects[currentIndex].image} alt={`${currentIndex.name} Icon`} />
+              <div className="Card">
+                <img src={projects[currentIndex].image} alt={`${currentIndex.name} Icon`} />
+                <div>
+                  <h1>{projects[currentIndex].name}</h1>
+                  <p>
+                    {projects[currentIndex].desc.substring(0,126)}
+                    {projects[currentIndex].desc.length > 126 && <span>...</span>}
+                  </p>
+                  <a href={projects[currentIndex].link}>
+                    <button>
+                      View More
+                      <MdArrowForward className="ForwardIcon"/>
+                    </button>
+                  </a>
+                </div>
+              </div>
             </li>
             <li>
               <div>
@@ -100,7 +121,7 @@ const Projects = () =>{
             )}
           </ul>
         </div>
-          
+        <Publicity />
       </div>
     </div>
   )

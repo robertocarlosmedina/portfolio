@@ -37,11 +37,12 @@
 .ContactMe #contactButton{
     position: absolute;
     float: right;
-    width: 8rem;
+    width: 8.5rem;
     height: 3rem;
     margin-top: 1.5rem;
-    font-size: 1rem;
-    text-align: center;
+    font-size: .9rem;
+    text-align: left;
+    padding-left: 1rem;
     background-color: var(--primary-button-color);
     text-decoration: none;
     border-radius: 10px;
@@ -49,10 +50,21 @@
     border: 1px solid transparent;
     cursor: pointer;
 }
+.ContactMe #contactButton .ForwardIcon-2{
+    position: absolute;
+    margin-top: .1rem;
+    margin-left: .5rem;
+    transition: transform .5s ease;
+}
 #contactButton:hover{
-    color: var(--object-secundary-color);
+    color: var(--color-text-1);
     border: 1px solid var(--border-color-2);
 }
+#contactButton:hover .ForwardIcon-2{
+    color:var(--color-text);
+    transform: translateX(10px);
+}
+
 
 /* images display style */
 .FrontAnimation{

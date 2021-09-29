@@ -73,17 +73,31 @@
     margin-top: 8rem;
 }
 .SendMessageButton{
+    margin-top: -1rem;
     width: 10rem;
     height: 3rem;
+    text-align: left;
+    padding-left: 1rem;
     background-color: var(--primary-button-color);
     color: var(--color-text);
     border: 1px solid transparent;
     border-radius: 8px;
     font-size: .9rem;
 }
+.SendMessageButton .SendIcon{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    margin-left: .55rem;
+    transition: transform .5s ease;
+}
 .SendMessageButton:hover{
-    color: var(--object-secundary-color);
+    color: var(--color-text-1);
     border: 1px solid  var(--object-primary-color);
+}
+.SendMessageButton:hover .SendIcon{
+    color: var(--color-text);
+    transform: translateX(10px);
 }
 
 /* Media querys */

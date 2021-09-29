@@ -1,6 +1,6 @@
 import React from "react";
 import { IoCall } from 'react-icons/io5'
-import { MdEmail } from 'react-icons/md'
+import { MdEmail, MdSend } from 'react-icons/md'
 import { TiLocation } from 'react-icons/ti'
 
 import './contactme.css'
@@ -57,6 +57,7 @@ const ContactMe = () =>{
                     <li>
                       <button className="SendMessageButton">
                         Send Message
+                        <MdSend className="SendIcon"/>
                       </button>
                     </li>
                   </ul>

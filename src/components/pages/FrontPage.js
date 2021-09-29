@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 import { FaLinkedin, FaGithubSquare,FaWhatsappSquare } from 'react-icons/fa'
+import { MdArrowForward } from 'react-icons/md'
 import { BiMouse } from 'react-icons/bi'
 import { IoIosArrowDown } from 'react-icons/io'
 
@@ -13,7 +14,7 @@ const FrontPage = () =>{
         {
             name:"Linkedin",
             Icon:FaLinkedin,
-            linkTo:"",
+            linkTo:"https://www.linkedin.com/in/roberto-medina-28062318a/",
         },
         {
             name:"Github",
@@ -45,6 +46,7 @@ const FrontPage = () =>{
               >
                 <button id="contactButton">
                     Contact Me
+                    <MdArrowForward className="ForwardIcon-2"/>
                 </button>
               </Link>
             </div>

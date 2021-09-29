@@ -73,12 +73,21 @@
     transition: transform 0.5s ease;
 }
 .ProjectsConteiner .ProjectCard li div button:hover {
-    color: var(--object-secundary-color);
+    color: var(--color-text-1);
     border: 1px solid var(--object-secundary-color);
 }
 .ProjectsConteiner .ProjectCard li div button:hover .ForwardIcon{ 
     transform: translateX(10px);
+    color: var(--color-text);
 }
+.ProjectCard .Card{
+    width: 15rem;
+    height: 15rem;
+    background-color: thistle;
+    overflow: hidden;
+}
+
+
 .CarroselPosition {
     position: absolute;
     margin-top: 18rem;
@@ -95,7 +104,7 @@
     transition: background-color .75s ease;
 }
 .ActiveProject{
-    background-color: var(--color-text-1);
+    background-color: var(--color-text);
 }
 .UnActiveProject{
     background-color: var(--object-secundary-color);

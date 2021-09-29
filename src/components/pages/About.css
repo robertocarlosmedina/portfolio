@@ -95,11 +95,16 @@
     text-decoration: none;
 }
 .AboutmeConteiner  .CVDownloader a:hover{
-    color: var(--object-secundary-color);
+    color: var(--color-text-1);
     border: 1px solid var(--object-secundary-color);
 }
 .AboutmeConteiner .CVDownloader .DownloadIcon{
     margin-left: .75rem;
+    transition: transform .5s ease;
+}
+.AboutmeConteiner  .CVDownloader a:hover .DownloadIcon{
+    color: var(--color-text);
+    transform: translateY(2px);
 }
 
 /* Media querys */
