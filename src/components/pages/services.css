@@ -4,3 +4,43 @@
     height: 100vh;
     font-family: 'Ubuntu', 'Serif';
 }
+.ServicesPage{
+    position: absolute;
+    margin-top: 12rem;
+    width: 100%;
+}
+.ServicesPage div{
+    width: 80%;
+    height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-text);
+}
+.ServicesElements li{
+    list-style: none;
+    display: inline-flex;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: 20rem;
+    height:20rem;
+}
+.ServiceHeader{
+    background-color: var(--object-primary-color);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.ServiceHeader .ServiceTittle img{
+    width: 30px;
+    height: 30px;
+    margin-left: -10rem;
+    margin-right: 1rem;
+}
+.ServiceTittle span{
+    position: absolute;
+    margin-top: .25rem;
+    font-size: 1.12rem;
+}
+/* .ServicesElements li{
+    
+} */

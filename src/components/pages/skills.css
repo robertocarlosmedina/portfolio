@@ -1,49 +1,100 @@
 .Skills{
     /* position: absolute; */
     width: 100%;
-    height: 100vh;
+    height: 50rem;
     font-family: 'Ubuntu', 'Serif';
 }
 .SkillsConteiner{
     position: absolute;
     margin-top: 25vh;
     width: 100%;
-    height: 25rem;
+    /* height: 25rem; */
     text-align: center;
+    margin-bottom: 30rem;
     color: var(--color-text);
 }
-.SkillsConteiner ul{
+.SkillsElements{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.SkillsElements ul{
     margin-left: -2rem;
     width: 70%;
     margin-right: auto;
     margin-left: auto;
 }
-
-.SkillsConteiner ul li{
+.SkillsElements li{
     list-style: none;
     display: inline-flex;
-    padding: 2rem;
-    border-radius: 10px;
-    border: 1px solid transparent;
 }
-.SkillsConteiner ul li img{
+.SkillHearder img{
     width: 30px;
     height: 30px;
-    margin-right: .75rem;
-    margin-top: -.15rem;
+    margin-right: 1.75rem;
+    /* margin-top: .1rem; */
 }
-.SkillsConteiner ul li .DropIcon{
+
+.DropIcon{
     width: 2rem;
     height: 2rem;
     color: var(--object-secundary-color);
-    margin-top: -.3rem;
-    margin-left: .5rem;
+    /* margin-top: -10rem; */
+    margin-left: 10.5rem;
 }
-.SkillsConteiner ul li:hover{
-    list-style: none;
-    display: inline-flex;
-    padding: 2rem;
+.SkillsElements li .SkillHearder .SkillTittle{
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+.SkillsElements li .SkillHearder span{
+    position: absolute;
+    margin-top:.5rem ;
+}
+.SkillsElements li .SkillHearder .SkillTittle:hover{
+    /* padding: 2rem; */
     border-radius: 10px;
     border: 1px solid var(--object-secundary-color);
     color: var(--object-secundary-color);
+}
+.SubSkillDisplay{
+    margin-top: 3rem;
+    margin-left: 1.25rem;
+    /* background-color: teal; */
+}
+.SubSkillDisplay div{
+    text-align: left;
+}
+.SubSkillDisplay div .SubSkillLevelConteiner{
+    width: 206px;
+    height: .8rem;
+    /* background-color: turquoise; */
+    border: 2px solid var(--object-secundary-color);
+    border-radius: 9px;
+}
+.SubSkillDisplay div .SubSkillLevelConteiner .SubSkillLevel{
+    margin-top: .1rem;
+    margin-left: .2rem;
+    width: 200px;
+    height: .6rem;
+    border-radius: 9px;
+    background-color: var(--object-primary-color);
+}
+.SubSkillLevelPercentage{
+    /* position: absolute; */
+    margin-top: -.95rem;
+    margin-left: 13.7rem;
+}
+
+/* Media querys */
+
+@media screen and (max-width: 333px) {
+    .Skills{
+        height: 70rem;
+    }
+}
+@media screen and (max-width: 333px) {
+    .Skills{
+        height: 70rem;
+    }
 }

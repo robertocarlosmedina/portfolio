@@ -16,7 +16,7 @@ const Skills = () =>{
         subSkills:[
           {
             name:"Figma",
-            level:90
+            level:80
           },
           {
             name:"Gimp",
@@ -105,6 +105,7 @@ const Skills = () =>{
           skill.indropState = false
         }
         newArray.push(skill)
+        return skill
       })
       setSkillsList([])
       setSkillsList(newArray)
@@ -116,15 +117,37 @@ const Skills = () =>{
           <h2>Technical skills</h2>
         </div>
         <div className="SkillsConteiner">
-          <ul>
-            {skillsList.map((skill, i) =>
-              <li key={i} onClick={showDropInfo}>
-                <img src={skill.Icon} alt={`${skill.name}`} />
-                {skill.name}
-                {skill.indropState ? <RiArrowDropUpLine  className="DropIcon"/> : <RiArrowDropDownLine className="DropIcon"/>}
-              </li>
-            )}
-          </ul>
+          <div>
+            <ul className="SkillsElements">
+              {skillsList.map((skill, i) =>
+                <li key={i} >
+                  <div className={"SkillHearder"} onClick={showDropInfo} >
+                    <div className="SkillTittle">
+                      <img src={skill.Icon} alt={`${skill.name}`} />
+                      <span>{skill.name}</span>
+                      {skill.indropState ? <RiArrowDropUpLine  className="DropIcon"/> : <RiArrowDropDownLine className="DropIcon"/>}
+                    </div>
+                    {skill.indropState && 
+                    <div className="SubSkillDisplay">
+                      {skill.subSkills.map((subSkill, i) =>
+                        <div key={i}>
+                          <p>{subSkill.name}</p>
+                          <div className="SubSkillLevelConteiner">
+                            <div className="SubSkillLevel" 
+                                 style={{width:((subSkill.level*200)/100)+'px'}}>
+                            </div>
+                            <div className="SubSkillLevelPercentage">{subSkill.level}%</div>
+                          </div>
+                          
+                        </div>
+                      )}
+                    </div>}
+                  </div>
+                  <br/>
+                </li>
+              )}
+            </ul>
+          </div>
         </div>
       </div>
     )
