@@ -6,15 +6,16 @@
 }
 .ServicesPage{
     position: absolute;
-    margin-top: 12rem;
+    margin-top: 10rem;
     width: 100%;
+    margin-bottom: 12rem;
 }
 .ServicesPage div{
     width: 80%;
-    height: 20px;
     margin-left: auto;
     margin-right: auto;
     color: var(--color-text);
+    
 }
 .ServicesElements li{
     list-style: none;
@@ -22,25 +23,43 @@
     margin-right: 2rem;
     margin-bottom: 2rem;
     width: 20rem;
-    height:20rem;
-}
-.ServiceHeader{
+    height:10rem;
     background-color: var(--object-primary-color);
     border-radius: 10px;
     padding: 2rem;
 }
-
 .ServiceHeader .ServiceTittle img{
     width: 30px;
     height: 30px;
-    margin-left: -10rem;
+    margin-left: -12rem;
     margin-right: 1rem;
 }
 .ServiceTittle span{
     position: absolute;
     margin-top: .25rem;
-    font-size: 1.12rem;
+    font-size: 1.22rem;
+    font-style: bold;
 }
-/* .ServicesElements li{
-    
-} */
+.SubServices span{
+    text-align: left;
+}
+.SubServices img{
+    width: 16px;
+    height: 16px;
+}
+.SubServices span p span{
+    position:absolute;
+    margin-left: 1rem;
+    margin-top: 0rem;
+}
+.Projects{
+    margin-top: 10rem;
+}
+
+/* Media querys */
+
+@media screen and (max-width: 1091px) {
+    .Projects{
+        margin-top: 45rem;
+    }
+}

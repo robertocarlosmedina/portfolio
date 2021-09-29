@@ -33,10 +33,7 @@ const Services = () =>{
           name:"Database Design"
         },
         {
-          name:"Api Management"
-        },
-        {
-          name:"Verssion Control"
+          name:"API Management"
         },
         {
           name:"Agility and flexibility"
@@ -48,7 +45,7 @@ const Services = () =>{
       Icon:FrontEnd,
       subServices:[
         {
-          name:"Responsive App Developer"
+          name:"Responsive Developer"
         },
         {
           name:"Verssion Control"
@@ -81,7 +78,7 @@ const Services = () =>{
         <h2>What I offer</h2>
       </div>
       <div className="ServicesPage">
-        <div>
+        <div className="ServicePageConteiner">
           <ul className="ServicesElements">
             {services.map((service, i) =>
               <li key={i} >
@@ -90,9 +87,14 @@ const Services = () =>{
                     <img src={service.Icon} alt={`${service.name}`} />
                     <span>{service.name}</span>
                   </div>
-                  <div>
+                  <div className="SubServices">
                   {service.subServices.map((subService, i) =>
-                      <p>{subService.name}</p>
+                      <span key={i}>
+                        <p>
+                          <img src={TickIcon} alt={"check box"} />
+                          <span>{subService.name}</span>
+                        </p>
+                      </span>
                   )}
                   </div>
                 </div>

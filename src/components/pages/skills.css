@@ -14,7 +14,7 @@
     color: var(--color-text);
 }
 .SkillsElements{
-    width: 80%;
+    width: 60%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -58,15 +58,16 @@
     color: var(--object-secundary-color);
 }
 .SubSkillDisplay{
-    margin-top: 3rem;
-    margin-left: 1.25rem;
+    margin-top: 1rem;
+    margin-left: 2.55rem;
+    margin-bottom: 2rem;
     /* background-color: teal; */
 }
 .SubSkillDisplay div{
     text-align: left;
 }
 .SubSkillDisplay div .SubSkillLevelConteiner{
-    width: 206px;
+    width: 204px;
     height: .8rem;
     /* background-color: turquoise; */
     border: 2px solid var(--object-secundary-color);
@@ -74,20 +75,20 @@
 }
 .SubSkillDisplay div .SubSkillLevelConteiner .SubSkillLevel{
     margin-top: .1rem;
-    margin-left: .2rem;
+    margin-left: .1rem;
     width: 200px;
     height: .6rem;
     border-radius: 9px;
-    background-color: var(--object-primary-color);
+    background-color: var(--object-secundary-color);
 }
 .SubSkillLevelPercentage{
     /* position: absolute; */
-    margin-top: -.95rem;
-    margin-left: 13.7rem;
+    margin-top: -2.75rem;
+    margin-left: 10.7rem;
+    color: var(--object-secundary-color);
 }
 
 /* Media querys */
-
 @media screen and (max-width: 333px) {
     .Skills{
         height: 70rem;
