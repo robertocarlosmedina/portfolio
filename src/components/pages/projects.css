@@ -4,3 +4,99 @@
     height: 100vh;
     font-family: 'Ubuntu', 'Serif';
 }
+.ProjectsConteiner{
+    position: absolute;
+    width: 100%;
+    margin-top: 12.5rem;
+    /* background-color: tomato; */
+}
+.ProjectsConteiner #ProjectCarroselrightArrow,
+.ProjectsConteiner #ProjectCarroselleftArrow{
+    width: 40px;
+    height: 40px;
+    color: var(--object-secundary-color);
+}
+.ProjectsConteiner #ProjectCarroselrightArrow:hover,
+.ProjectsConteiner #ProjectCarroselleftArrow:hover{
+    color: var(--color-text-1);
+    cursor: pointer;
+}
+.ProjectsConteiner #ProjectCarroselrightArrow{
+    position: absolute;
+    margin-left: -5rem;
+    margin-top: 7rem;
+}
+.ProjectsConteiner #ProjectCarroselleftArrow{
+    position: absolute;
+    margin-left: 35rem;
+    margin-top: 7rem;
+}
+.ProjectsConteiner .ProjectCard{
+    width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+}
+.ProjectsConteiner .ProjectCard li{
+    text-align: left;
+    list-style: none;
+    margin-right: 2rem;
+}
+.ProjectsConteiner .ProjectCard li img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 15px;
+}
+.ProjectsConteiner .ProjectCard li div h1{
+    font-size: 1.5rem;
+}
+.ProjectsConteiner .ProjectCard li div p{
+    color: var(--color-text-1);
+    width: 13rem;
+    overflow: hidden;
+}
+.ProjectsConteiner .ProjectCard li div button{
+    width: 8rem;
+    height: 2.5rem;
+    background-color: var(--primary-button-color);
+    color: var(--color-text);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    text-align: left;
+    padding-left: .85rem;
+    cursor: pointer;
+}
+.ProjectsConteiner .ProjectCard li div button .ForwardIcon{
+    position: absolute;
+    margin-top: .13rem;
+    margin-left: .5rem;
+    transition: transform 0.5s ease;
+}
+.ProjectsConteiner .ProjectCard li div button:hover {
+    color: var(--object-secundary-color);
+    border: 1px solid var(--object-secundary-color);
+}
+.ProjectsConteiner .ProjectCard li div button:hover .ForwardIcon{ 
+    transform: translateX(10px);
+}
+.CarroselPosition {
+    position: absolute;
+    margin-top: 18rem;
+    margin-left: -22rem;
+    text-align: center;
+    display: inline-flex;
+}
+.CarroselPosition li{
+    list-style: none;
+    margin-right: 1rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    transition: background-color .75s ease;
+}
+.ActiveProject{
+    background-color: var(--color-text-1);
+}
+.UnActiveProject{
+    background-color: var(--object-secundary-color);
+}
