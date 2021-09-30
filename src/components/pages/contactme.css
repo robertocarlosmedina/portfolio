@@ -11,6 +11,7 @@
     margin-top: 12rem;
 }
 
+
 .GetInTouch .Conteiner div .Conteiner_content{
     width: 90%;
     margin-left: auto;
@@ -83,6 +84,7 @@
     border: 1px solid transparent;
     border-radius: 8px;
     font-size: .9rem;
+    cursor: pointer;
 }
 .SendMessageButton .SendIcon{
     width: 18px;

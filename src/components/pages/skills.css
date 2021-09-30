@@ -46,6 +46,7 @@
     padding: 1rem;
     border-radius: 10px;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 .SkillsElements li .SkillHearder span{
     position: absolute;

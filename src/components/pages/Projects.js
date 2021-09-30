@@ -1,6 +1,5 @@
 import  {React, useState} from "react";
-import { MdKeyboardArrowRight, MdKeyboardArrowLeft, 
-      MdArrowForward } from 'react-icons/md'
+import { MdArrowForward } from 'react-icons/md'
 
 
 import Publicity from "./Publicity";
@@ -39,28 +38,7 @@ const Projects = () =>{
       link:"https://github.com/RobertoCarlosMedina/AlgoData"
     },
   ])
-  const [currentIndex, setCurrentIndex] = useState(0)
 
-  const carrosselDisplayLeft = () =>{
-    if(currentIndex > 0){
-      setCurrentIndex(currentIndex-1)
-    }
-    else if(currentIndex === 0){
-      setCurrentIndex(projects.length-1)
-    }
-  }
-  const carrosselDisplayRight = () =>{
-    if(currentIndex < projects.length-1){
-      setCurrentIndex(currentIndex+1)
-    }
-    else if(currentIndex === projects.length-1){
-      setCurrentIndex(0)
-    }
-  }
-  const goTOCarroselPosition = (event) =>{
-    // setCurrentIndex(index)
-    console.log(event)
-  }
 
   return(
     <div className="Projects" id="Projects">
@@ -69,24 +47,19 @@ const Projects = () =>{
         <h2>What I have made</h2>
       </div>
       <div className="ProjectsConteiner">
-        <div>
-          <MdKeyboardArrowLeft  id="ProjectCarroselrightArrow"
-            onClick={carrosselDisplayLeft}
-          />
-          <MdKeyboardArrowRight id="ProjectCarroselleftArrow" 
-            onClick={carrosselDisplayRight}
-          />
           <ul className="ProjectCard">
-            <li>
+            {projects.map((project, i) =>
+            <li key={i}>
               <div className="Card">
-                <img src={projects[currentIndex].image} alt={`${currentIndex.name} Icon`} />
+                <span className="OpacityEffect"></span>
+                <img src={project.image} alt={`${project.name} Icon`} />
                 <div>
-                  <h1>{projects[currentIndex].name}</h1>
+                  <h1>{project.name}</h1>
                   <p>
-                    {projects[currentIndex].desc.substring(0,126)}
-                    {projects[currentIndex].desc.length > 126 && <span>...</span>}
+                    {project.desc.substring(0,126)}
+                    {project.desc.length > 126 && <span>...</span>}
                   </p>
-                  <a href={projects[currentIndex].link}>
+                  <a href={project.link}>
                     <button>
                       View More
                       <MdArrowForward className="ForwardIcon"/>
@@ -95,34 +68,10 @@ const Projects = () =>{
                 </div>
               </div>
             </li>
-            <li>
-              <div>
-                <h1>{projects[currentIndex].name}</h1>
-                <p>
-                  {projects[currentIndex].desc.substring(0,126)}
-                  {projects[currentIndex].desc.length > 126 && <span>...</span>}
-                </p>
-                <a href={projects[currentIndex].link}>
-                  <button>
-                    View More
-                    <MdArrowForward className="ForwardIcon"/>
-                  </button>
-                </a>
-              </div>
-            </li>
-          </ul>
-          <ul className="CarroselPosition">
-            {projects.map((item, i)=>
-              <li className={i===currentIndex ? "ActiveProject" : "UnActiveProject"}
-                  onClick={goTOCarroselPosition}
-                  key={i}
-              >
-              </li>
             )}
           </ul>
-        </div>
-        <Publicity />
       </div>
+      <Publicity />
     </div>
   )
 }

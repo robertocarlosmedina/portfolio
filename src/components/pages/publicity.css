@@ -1,11 +1,12 @@
 .Publicity{
-    width: 100%;
-    margin-top: 50vh;
-    margin-bottom: 30vh;
     position:absolute;
+    width: 100%;
+    margin-top: 160vh;
+    margin-bottom: 100vh;
+    
 }
 .GetInTouch{
-    margin-top: 110vh;
+    margin-top: 150vh;
 }
 
 .Publicity div{
@@ -24,7 +25,7 @@
     margin-right: auto;
     padding: 2rem;
     border-radius: 20px;
-    background-color: var(--object-secundary-color);
+    background-color: var(--object-primary-color);
 }
 
 .Publicity div div img{
@@ -53,7 +54,8 @@
     font-size: .85rem;
     background-color: var(--primary-button-color);
     color: var(--color-text);
-    border: 1px solid var(--object-secundary-color);
+    border: 1px solid transparent;
+    cursor: pointer;
 }
 
 .Publicity .Button .ForwardIcon-1{

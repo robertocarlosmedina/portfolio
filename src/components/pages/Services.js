@@ -82,18 +82,21 @@ const Services = () =>{
           <ul className="ServicesElements">
             {services.map((service, i) =>
               <li key={i} >
+                <span className="OpacityEffect"></span>
                 <div className="ServiceHeader">
                   <div className="ServiceTittle">
-                    <img src={service.Icon} alt={`${service.name}`} />
-                    <span>{service.name}</span>
+                    <div>
+                      <img src={service.Icon} alt={`${service.name}`} />
+                    </div>
+                    <p>{service.name}</p>
                   </div>
-                  <div className="SubServices">
+                  <div className="Sub_conteiner">
                   {service.subServices.map((subService, i) =>
-                      <span key={i}>
-                        <p>
+                      <span key={i} className="SubServices">
+                        <div>
                           <img src={TickIcon} alt={"check box"} />
-                          <span>{subService.name}</span>
-                        </p>
+                          {subService.name}
+                        </div>
                       </span>
                   )}
                   </div>

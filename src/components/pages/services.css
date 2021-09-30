@@ -15,41 +15,88 @@
     margin-left: auto;
     margin-right: auto;
     color: var(--color-text);
-    
+}
+.ServicePageConteiner{
+    margin-top: 3rem;
 }
 .ServicesElements li{
     list-style: none;
     display: inline-flex;
     margin-right: 2rem;
     margin-bottom: 2rem;
-    width: 20rem;
-    height:10rem;
-    background-color: var(--object-primary-color);
-    border-radius: 10px;
+    width: 12rem;
+    height:12rem;
+    /* background-color: var(--object-primary-color); */
+    border-radius: 18px;
+    border: 1px solid var(--object-primary-color);
     padding: 2rem;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
 }
 .ServiceHeader .ServiceTittle img{
-    width: 30px;
-    height: 30px;
-    margin-left: -12rem;
-    margin-right: 1rem;
+    /* position: absolute; */
+    width: 60px;
+    height: 60px;
+    /* margin-left: -12rem; */
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
 }
-.ServiceTittle span{
-    position: absolute;
+.ServiceTittle p{
+    /* position: relative; */
+    width: 10rem;
+    margin-left: -1rem;
     margin-top: .25rem;
     font-size: 1.22rem;
+    text-align: center;
     font-style: bold;
 }
-.SubServices span{
+.Sub_conteiner{
+    position: relative;
+    width: 20rem;
+    margin-top: 13rem;
+    transition: transform .5s ease-in-out;
+}
+.ServicesElements li:hover .Sub_conteiner{
+    transform: translateY(-22rem);
+}
+.ServicesElements li .OpacityEffect{
+    position: absolute;
+    width: 16.1rem;
+    height: 16.1rem;
+    margin-top: -2.1rem;
+    margin-left: -2.1rem;
+    border-radius: 18px;
+    /* background-color: linear-gradient(to left, #000000,transparent); */
+    /* background:linear-gradient(to top,#000000,transparent); */
+    background: transparent;
+    border: 1px solid var(--border-color);
+    transition:  background .8s ease-in-out;
+     
+    z-index: 0;
+}
+.ServicesElements li:hover .OpacityEffect{
+    background:var(--object-primary-color);
+    opacity: 0.9;
+}
+.SubServices{
+    /* position: r; */
+    margin-top: .5rem;
+    margin-left: -2rem;
+}
+.SubServices {
     text-align: left;
 }
 .SubServices img{
+    position: absolute;
     width: 16px;
     height: 16px;
+    margin-left: -1.5rem;
 }
-.SubServices span p span{
-    position:absolute;
-    margin-left: 1rem;
+.SubServices div{
+    width: 13rem;
+    /* position:absolute; */
+    margin-left: -1.5rem;
     margin-top: 0rem;
 }
 .Projects{
