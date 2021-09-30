@@ -115,8 +115,14 @@
         }
     }
 }
+@media screen and (max-width: 650px ) {
+    .ServicesPage{
+        margin-top: 5rem;
+    }
+}
 @media screen and (max-width: 384px) {
     .ServicesElements li{
+        margin-right: 0rem;
         margin-left: -1.5rem;
     }
 }

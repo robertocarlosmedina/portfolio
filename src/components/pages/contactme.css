@@ -14,7 +14,6 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    background-color: brown;
 }
 .ContactForm {
     width:70%;
@@ -22,7 +21,6 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    background-color: violet;
 }
 
 .ContactForm ul li{
@@ -31,7 +29,6 @@
     display: inline-flex;
     margin-right: 1rem;
     margin-bottom: 1rem;
-    background-color: teal;
 }
 .ContactForm ul li input, 
 .ContactForm li textarea{
@@ -87,6 +84,9 @@
 /* Media querys */
 
 @media screen and (max-width: 882px) {
+    .GetInTouch{ 
+        margin-top: 110rem;
+    }
     .ContactForm ul li .NormalInput{
         width: 25rem;
     }
@@ -99,6 +99,10 @@
     }
 }
 @media screen and (max-width: 850px) {
+    .ContactForm {
+        margin-left: 0;
+        margin-right: 0;
+    }
     .GetInTouch .Conteiner div{
         width: 80%;
     }
@@ -118,26 +122,53 @@
         width: 20rem;
     }
 }
-@media screen and (max-width: 850px) {
-    .GetInTouch .Conteiner div{
-        width: 100%;
-    }
-    .ContactForm {
-        width:100%;
-    }
-    .ContactForm {
-        width: none;
-    }
+@media screen and (max-width: 468px) {
     .ContactForm ul li .NormalInput{
-        width: 14rem;
+        width: 12rem;
         margin-left: -1rem;
     }
     .ContactForm ul li .smallInput{
-        width: 14rem;
+        width: 12rem;
         margin-left: -1rem;
     }
     .LargeInput{
-        width: 14rem;
+        width: 12rem;
         margin-left: -1rem;
+    }
+}
+@media screen and (max-width: 650px) {
+    .ContactForm{
+        margin-top: -5rem;
+    }
+}
+@media screen and (max-width: 358px) {
+    .ContactForm ul li .NormalInput{
+        width: 12rem;
+        margin-left: -2rem;
+    }
+    .ContactForm ul li .smallInput{
+        width: 12rem;
+        margin-left: -2rem;
+    }
+    .LargeInput{
+        width: 12rem;
+        margin-left: -2rem;
+    }
+    .SendMessageButton{
+        margin-left: -2rem;
+    }
+}
+@media screen and (max-width: 286px) {
+    .ContactForm ul li .NormalInput{
+        width: 11rem;
+        margin-left: -2.5rem;
+    }
+    .ContactForm ul li .smallInput{
+        width: 11rem;
+        margin-left: -2.5rem;
+    }
+    .LargeInput{
+        width: 11rem;
+        margin-left: -2.5rem;
     }
 }

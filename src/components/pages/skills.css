@@ -20,11 +20,12 @@
 }
 .SkillsElements ul{
     margin-left: -2rem;
-    width: 70%;
+    width: 60%;
     margin-right: auto;
     margin-left: auto;
 }
 .SkillsElements li{
+    /* width:10rem; */
     list-style: none;
     display: inline-flex;
 }
@@ -32,9 +33,7 @@
     width: 30px;
     height: 30px;
     margin-right: 1.75rem;
-    /* margin-top: .1rem; */
 }
-
 .DropIcon{
     width: 2rem;
     height: 2rem;
@@ -62,7 +61,6 @@
     margin-top: 1rem;
     margin-left: 2.55rem;
     margin-bottom: 2rem;
-    /* background-color: teal; */
 }
 .SubSkillDisplay div{
     text-align: left;
@@ -70,7 +68,6 @@
 .SubSkillDisplay div .SubSkillLevelConteiner{
     width: 204px;
     height: .8rem;
-    /* background-color: turquoise; */
     border: 2px solid var(--object-secundary-color);
     border-radius: 9px;
 }
@@ -121,7 +118,7 @@
         margin-left: 10rem;
     }
 }
-@media screen and (max-width: 351px) {
+@media screen and (max-width: 382px) {
     .SkillHearder img{
         margin-right: .5rem;
     }
@@ -133,15 +130,18 @@
     }
     .SkillsElements li {
         position: relative;
-        width: 20rem;
-        margin-left: -3.5rem;
+        width: 14rem;
+        margin-left: -3.75rem;
+        margin-right: 0rem;
     }
     .SubSkillDisplay{
         position: relative;
         margin-left: .5rem;
+        margin-right: 0rem;
     }
     .DropIcon{
         position: relative;
         margin-left: 7.3rem;
+        margin-right: 0rem;
     }
 }

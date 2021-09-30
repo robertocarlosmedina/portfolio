@@ -16,6 +16,7 @@
     /* background-color: thistle; */
     margin-right: auto;
     margin-left: auto;
+
 }
 .ProjectsConteiner .ProjectCard li{
     display: inline-flex;
@@ -120,4 +121,48 @@
 }
 .ProjectsConteiner li div:hover  h1{
     color: var(--color-text);
+}
+
+/* Media querys */
+@media screen and (max-width: 650px ) {
+    .ProjectsConteiner{
+        margin-top: 6rem;
+    }
+}
+@media screen and (max-width: 366px ) {
+    .ProjectsConteiner{
+        margin-left: -2rem;
+    }
+    .ProjectsConteiner .ProjectCard li .Card img{
+        width: 13rem;
+        height: 13rem;
+    }
+    .ProjectCard .Card{
+        width: 13rem;
+        height: 13rem;
+    }
+    .ProjectCard li div .OpacityEffect{
+        width: 12.9rem;
+        height: 12.9rem;
+    }
+    .ProjectCard .Card div h1{
+        margin-top: -12rem;
+        margin-left: -11rem;
+        font-size: .9rem;
+    }
+    .ProjectsConteiner .ProjectCard li div p{
+        width: 10rem;
+        font-size: .75rem;
+    }
+    .ProjectsConteiner .ProjectCard li div button{
+        margin-top: 10rem;
+        margin-left: 1.5rem;
+        transition: transform .5s ease-in-out;
+        z-index: 6;
+    }
+}
+@media screen and (max-width: 278px ) {
+    .ProjectsConteiner{
+        margin-left: -3.3rem;
+    }
 }

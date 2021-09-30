@@ -177,7 +177,7 @@ const Header = (props) =>{
                 <Link to={"Frontpage"} 
                       id="navLink" 
                       smooth={true} 
-                      duration={1000}
+                      duration={1200}
                       onClick={unselecteAll} 
                 >
                   Roberto
@@ -212,7 +212,7 @@ const Header = (props) =>{
                 </div>
             ))}
           </div>
-          {openMenu == "none" && <TiThMenu className="ThemeIcon" 
+          {openMenu === "none" && <TiThMenu className="ThemeIcon" 
                     id="menuIcon"
                     onClick={openMobileMenu}
           />}
@@ -230,7 +230,7 @@ const Header = (props) =>{
                         id={`${navItem.id}`}
                         onClick={navLinkLselected}
                         smooth={true} 
-                        duration={800}
+                        duration={1200}
               >
                 <div className="MenuButton" >
                   <navItem.icon id={`${navItem.id}`} alt={`${navItem.name}`}/>

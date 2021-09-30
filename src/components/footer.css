@@ -77,3 +77,23 @@
         width: 10rem;
     }
 }
+@media screen and (max-height:511px) {
+    .Footer .FooterPage{
+        margin-top: 5rem;
+    }
+}
+@media screen and (max-height:430px) {
+    .Footer .FooterPage{
+        margin-top: 12rem;
+    }
+}
+@media screen and (max-height:359px) {
+    .Footer .FooterPage{
+        margin-top: 16rem;
+    }
+}
+@media screen and (max-height:290px) {
+    .Footer .FooterPage{
+        margin-top: 18rem;
+    }
+}

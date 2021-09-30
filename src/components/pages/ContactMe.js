@@ -1,8 +1,5 @@
 import React from "react";
-import { IoCall } from 'react-icons/io5'
-import { MdEmail, MdSend } from 'react-icons/md'
-import { TiLocation } from 'react-icons/ti'
-
+import { MdSend } from 'react-icons/md'
 import './contactme.css'
 
 const ContactMe = () =>{
