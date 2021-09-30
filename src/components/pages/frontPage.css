@@ -3,7 +3,6 @@
     height: 100vh;
     font-family: 'Ubuntu', 'Serif';
     z-index: 2;
-    /* background-color: rgb(13, 13, 216); */
 }
 /* presentation texts animations */
 .PresentationComponents{
@@ -68,15 +67,19 @@
 
 /* images display style */
 .FrontAnimation{
+    /* width: 20rem;
+    height: 20rem; */
     position:absolute;
     margin-top: 30vh;
     margin-left: 60%;
+    background-color: cornflowerblue;
 }
 .FrontAnimation #primaryLosangle,
 .FrontAnimation #secondLosangle,
 .FrontAnimation #thertLosangle{
     position: absolute;
     border-radius: 10%;
+    /* margin-left: -10rem; */
     transform: rotate(45deg);
 }
 .FrontAnimation #primaryLosangle{

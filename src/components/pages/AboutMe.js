@@ -49,7 +49,7 @@ const AboutMe = () =>{
             </div>
             <div className="CVDownloader">
                 <a download="" href={CVFile}>
-                  Download
+                  Download CV
                   <FiDownload  className="DownloadIcon"/>
                 </a>
             </div>
