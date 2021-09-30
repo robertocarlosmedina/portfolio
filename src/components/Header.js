@@ -63,7 +63,7 @@ const Header = (props) =>{
         maxposition:3700
       }
   ])
-  const [openMenu, setOpenMenu] = useState(false)
+  const [openMenu, setOpenMenu] = useState("none")
   const [themeIcons, setThemeIcons] = useState([
       { 
         name:"Dark",
@@ -142,11 +142,11 @@ const Header = (props) =>{
   }
   // To oppen the Mobile navegation Menu
   const openMobileMenu = () =>{
-    setOpenMenu(true)
+    setOpenMenu("block")
   }
   // To Close the Mobile Menu
   const closeMobileMenu = () =>{
-    setOpenMenu(false)
+    setOpenMenu("none")
   }
   const goToLink = (link) =>{
     history.push(`/${link}`)
@@ -212,12 +212,12 @@ const Header = (props) =>{
                 </div>
             ))}
           </div>
-          {!openMenu && <TiThMenu className="ThemeIcon" 
+          {openMenu == "none" && <TiThMenu className="ThemeIcon" 
                     id="menuIcon"
                     onClick={openMobileMenu}
           />}
       </div>
-      {openMenu && <div className="MobileMenu">
+      <div className="MobileMenu" style={{display:`${openMenu}`}}>
         <div>
           <RiCloseFill className="ThemeIcon closeIcon"
             onClick={closeMobileMenu}  
@@ -243,7 +243,7 @@ const Header = (props) =>{
             </li>
           ))}
         </ul>
-      </div>}
+      </div>
     </div>
   )
 }

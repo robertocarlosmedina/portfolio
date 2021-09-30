@@ -1,12 +1,11 @@
 .Frontpage{
     width: 100%;
     height: 100vh;
-    font-family: 'Ubuntu', 'Serif';
     z-index: 2;
 }
 /* presentation texts animations */
 .PresentationComponents{
-
+    z-index: 11;
     position: absolute;
     margin-top: 25vh;
     margin-left: 16vh;
@@ -29,6 +28,7 @@
 .PresentationComponents .PresentationText{
     width: 65vh;
     height: 15vh;
+    font-size: 1rem;
 }
 .ContactMe{
     position: absolute;

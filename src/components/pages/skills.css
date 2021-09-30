@@ -90,13 +90,58 @@
 }
 
 /* Media querys */
-@media screen and (max-width: 333px) {
+@media screen and (max-height: 570px ) {
     .Skills{
+        margin-top: 5rem;
         height: 70rem;
     }
+    .SkillsConteiner{
+        margin-top: 10rem;
+    }
+    @media screen and (max-width:650px) {
+        .SkillsConteiner{
+            margin-top: 5.5rem;
+        }
+    }
 }
-@media screen and (max-width: 333px) {
-    .Skills{
-        height: 70rem;
+
+@media screen and (max-width: 487px) {
+    .SkillHearder img{
+        margin-right: .5rem;
+    }
+    .SkillsElements li {
+        margin-left: -2.5rem;
+    }
+    .SubSkillDisplay{
+        position: relative;
+        margin-left: 2.5rem;
+    }
+    .DropIcon{
+        position: relative;
+        margin-left: 10rem;
+    }
+}
+@media screen and (max-width: 351px) {
+    .SkillHearder img{
+        margin-right: .5rem;
+    }
+    .SkillsElements li .SkillHearder .SkillTittle{
+        padding: .5rem;
+    }
+    .SkillsElements li .SkillHearder span{
+        font-size: .75rem;
+    }
+    .SkillsElements li {
+        position: relative;
+        width: 20rem;
+        margin-left: -3.5rem;
+    }
+    .SubSkillDisplay{
+        position: relative;
+        margin-left: .5rem;
+    }
+    .DropIcon{
+        position: relative;
+        margin-left: 7.3rem;
     }
 }

@@ -121,8 +121,8 @@ const Skills = () =>{
             <ul className="SkillsElements">
               {skillsList.map((skill, i) =>
                 <li key={i} >
-                  <div className={"SkillHearder"} onClick={showDropInfo} >
-                    <div className="SkillTittle">
+                  <div className={"SkillHearder"} >
+                    <div className="SkillTittle" onClick={showDropInfo} >
                       <img src={skill.Icon} alt={`${skill.name}`} />
                       <span>{skill.name}</span>
                       {skill.indropState ? <RiArrowDropUpLine  className="DropIcon"/> : <RiArrowDropDownLine className="DropIcon"/>}

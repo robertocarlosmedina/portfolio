@@ -7,6 +7,7 @@
 .Footer .FooterPage{
     position: absolute;
     width: 100%;
+    margin-top: 1rem;
     text-align: center;
     background-color: var(--object-therth-color);
 }
@@ -18,6 +19,7 @@
     margin-right: 2rem;
     margin-bottom: 2rem;
     text-align: left;
+    
 }
 
 .Footer .FooterList .List_Element h2{
@@ -47,6 +49,7 @@
 .Footer_info{
     margin-top: -.7rem;
     margin-left: 1rem;
+    
 }
 .Footer_Contact_icon:hover{
     color: var(--object-primary-color);
@@ -61,5 +64,16 @@
 @media screen and (max-width: 650px) {
     .Copyright{
         margin-top: -6rem;
+    }
+}
+@media screen and (max-width: 396px) {
+    .Footer .FooterList li{
+        font-size: .85rem;
+    }
+    .Copyright{
+        font-size: .65rem;
+    }
+    .Footer .FooterList li{
+        width: 10rem;
     }
 }

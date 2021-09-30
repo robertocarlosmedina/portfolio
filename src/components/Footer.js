@@ -26,7 +26,7 @@ const Footer = () =>{
                 </p>
                 <p>
                   <MdEmail className="Footer_icon"/>
-                  <span className="Footer_info">robertocarlosmedina.dev@gmail.com</span>
+                  <span className="Footer_info">rmedina@uta.cv</span>
                 </p>
                 <p>
                   <TiLocation className="Footer_icon"/>

@@ -14,56 +14,33 @@ const ContactMe = () =>{
         </div>
         <div className="Conteiner">
           <div>
-            <ul className="Conteiner_content">
-              <li className="PersonalInfo" id="ListItem">
-                <ul>
-                  <li>
-                    <IoCall id="InfoIcon"/>
-                    <h1>Call Me</h1>
-                    <h2>+238 5843604</h2>
-                  </li>
-                  <li>
-                    <MdEmail id="InfoIcon"/>
-                    <h1>Email</h1>
-                    <h2>robertocarlosmedina.dev@gmail.com</h2>
-                  </li>
-                  <li>
-                    <TiLocation id="InfoIcon"/>
-                    <h1>Location</h1>
-                    <h2>Mindelo, Cabo Verde</h2>
-                  </li>
-                </ul>
-              </li> 
-              <li id="ListItem">
-                <from className="ContactForm">
-                  <ul>
-                    <li>
-                      <input placeholder="Name"/>
-                    </li>
-                    <li>
-                      <input placeholder="Email"/>
-                    </li>
-                    <li>
-                      <input placeholder="Project" 
-                             className="NormalInput"
-                      />
-                    </li>
-                    <li>
-                      <textarea placeholder="Message"
-                             className="LargeInput"
-                      />
-                    </li>
-                    <p></p>
-                    <li>
-                      <button className="SendMessageButton">
-                        Send Message
-                        <MdSend className="SendIcon"/>
-                      </button>
-                    </li>
-                  </ul>
-                </from>
-              </li>
-            </ul>
+            <form className="ContactForm">
+              <ul>
+                <li>
+                  <input placeholder="Name"className="smallInput"/>
+                </li>
+                <li>
+                  <input placeholder="Email"className="smallInput"/>
+                </li>
+                <li>
+                  <input placeholder="Project" 
+                         className="NormalInput"
+                  />
+                </li>
+                <li>
+                  <textarea placeholder="Message"
+                         className="LargeInput"
+                  />
+                </li>
+                <p></p>
+                <li>
+                  <button className="SendMessageButton">
+                    Send Message
+                    <MdSend className="SendIcon"/>
+                  </button>
+                </li>
+              </ul>
+            </form>
           </div>
         </div>
       </div>

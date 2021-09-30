@@ -10,50 +10,28 @@
     height: 20rem;
     margin-top: 12rem;
 }
-
-
-.GetInTouch .Conteiner div .Conteiner_content{
-    width: 90%;
+.GetInTouch .Conteiner div{
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-
-}
-.GetInTouch .Conteiner .Conteiner_content #ListItem{
-    display: inline-flex;
-    margin-bottom: 2rem;
-    text-align: left;
-}
-.GetInTouch .Conteiner .Conteiner_content li{
-    list-style: none;
-}
-.GetInTouch .Conteiner .Conteiner_content .PersonalInfo{
-    text-align: left;
-}
-.GetInTouch .Conteiner .Conteiner_content .PersonalInfo h1{
-    font-size: 1.3rem;
-}
-.GetInTouch .Conteiner .Conteiner_content .PersonalInfo h2{
-    font-size: .85rem;
-}
-.GetInTouch .Conteiner .Conteiner_content .PersonalInfo #InfoIcon{
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    margin-top: .7rem;
-    margin-left: -3rem;
-    color: var(--object-secundary-color);
+    background-color: brown;
 }
 .ContactForm {
-    width:35rem;
+    width:70%;
+    /* margin-left: -9rem; */
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    background-color: violet;
 }
+
 .ContactForm ul li{
+    /* position:absolute; */
     list-style: none;
     display: inline-flex;
     margin-right: 1rem;
     margin-bottom: 1rem;
-    
+    background-color: teal;
 }
 .ContactForm ul li input, 
 .ContactForm li textarea{
@@ -64,10 +42,13 @@
     color: var(--color-text);
 }
 .ContactForm ul li .NormalInput{
-    width: 28.5rem;
+    width: 25rem;
+}
+.ContactForm ul li .smallInput{
+    width: 11rem;
 }
 .LargeInput{
-    width: 28.5rem;
+    width: 25rem;
     height: 10rem;
 }
 .Footer{
@@ -102,4 +83,61 @@
     transform: translateX(10px);
 }
 
+
 /* Media querys */
+
+@media screen and (max-width: 882px) {
+    .ContactForm ul li .NormalInput{
+        width: 25rem;
+    }
+    .ContactForm ul li .smallInput{
+        width: 25rem;
+    }
+    .LargeInput{
+        width: 25rem;
+        height: 10rem;
+    }
+}
+@media screen and (max-width: 850px) {
+    .GetInTouch .Conteiner div{
+        width: 80%;
+    }
+    .ContactForm {
+        width:100%;
+    }
+    .ContactForm {
+        width: none;
+    }
+    .ContactForm ul li .NormalInput{
+        width: 20rem;
+    }
+    .ContactForm ul li .smallInput{
+        width: 20rem;
+    }
+    .LargeInput{
+        width: 20rem;
+    }
+}
+@media screen and (max-width: 850px) {
+    .GetInTouch .Conteiner div{
+        width: 100%;
+    }
+    .ContactForm {
+        width:100%;
+    }
+    .ContactForm {
+        width: none;
+    }
+    .ContactForm ul li .NormalInput{
+        width: 14rem;
+        margin-left: -1rem;
+    }
+    .ContactForm ul li .smallInput{
+        width: 14rem;
+        margin-left: -1rem;
+    }
+    .LargeInput{
+        width: 14rem;
+        margin-left: -1rem;
+    }
+}

@@ -1,14 +1,13 @@
 .Services{
-    /* position: absolute; */
     width: 100%;
     height: 100vh;
     font-family: 'Ubuntu', 'Serif';
+    margin-top: -2rem;
 }
 .ServicesPage{
     position: absolute;
     margin-top: 10rem;
     width: 100%;
-    margin-bottom: 12rem;
 }
 .ServicesPage div{
     width: 80%;
@@ -26,7 +25,6 @@
     margin-bottom: 2rem;
     width: 12rem;
     height:12rem;
-    /* background-color: var(--object-primary-color); */
     border-radius: 18px;
     border: 1px solid var(--object-primary-color);
     padding: 2rem;
@@ -35,15 +33,12 @@
     cursor: pointer;
 }
 .ServiceHeader .ServiceTittle img{
-    /* position: absolute; */
     width: 60px;
     height: 60px;
-    /* margin-left: -12rem; */
     margin-bottom: 1rem;
     margin-top: 2.5rem;
 }
 .ServiceTittle p{
-    /* position: relative; */
     width: 10rem;
     margin-left: -1rem;
     margin-top: .25rem;
@@ -67,12 +62,9 @@
     margin-top: -2.1rem;
     margin-left: -2.1rem;
     border-radius: 18px;
-    /* background-color: linear-gradient(to left, #000000,transparent); */
-    /* background:linear-gradient(to top,#000000,transparent); */
     background: transparent;
     border: 1px solid var(--border-color);
     transition:  background .8s ease-in-out;
-     
     z-index: 0;
 }
 .ServicesElements li:hover .OpacityEffect{
@@ -80,7 +72,6 @@
     opacity: 0.9;
 }
 .SubServices{
-    /* position: r; */
     margin-top: .5rem;
     margin-left: -2rem;
 }
@@ -95,7 +86,6 @@
 }
 .SubServices div{
     width: 13rem;
-    /* position:absolute; */
     margin-left: -1.5rem;
     margin-top: 0rem;
 }
@@ -106,7 +96,58 @@
 /* Media querys */
 
 @media screen and (max-width: 1091px) {
+    .ServicesPage{
+        /* position: relative; */
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
     .Projects{
-        margin-top: 45rem;
+        margin-top: 20rem;
+    }
+}
+@media screen and (max-width: 773px) {
+    .Projects{
+        margin-top: 60rem;
+    }
+    @media screen and (max-height: 470px) {
+        .Projects{
+            margin-top: 70rem;
+        }
+    }
+}
+@media screen and (max-width: 384px) {
+    .ServicesElements li{
+        margin-left: -1.5rem;
+    }
+}
+@media screen and (max-width: 331px) {
+    .ServicesElements li{
+        width: 9rem;
+        height: 9rem;
+    }
+    .ServicesElements li .OpacityEffect{
+        width:13.1rem;
+        height: 13.1rem;
+    }
+    .ServiceHeader .ServiceTittle img{
+        width: 30px;
+        height: 30px;
+    }
+    .ServiceTittle p{
+        margin-left: -2rem;
+    }
+    .ServicesElements li{
+        margin-left: -2.5rem;
+    }
+    .ServicePageConteiner{
+        margin-top:0rem;
+    }
+    @media screen and (max-height: 364px) {
+        .ServicePageConteiner{
+            margin-top:-4rem;
+        }
+        .Projects{
+            margin-top: 50rem;
+        }
     }
 }

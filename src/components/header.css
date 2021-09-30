@@ -85,7 +85,8 @@
     bottom: -.25rem;
     background-color: var(--dark-background);
     border: 1px solid var(--border-color);
-    z-index: 11;
+    z-index: 30;
+    transition: display 3s ease;
 }
 .MobileMenu ul{
     margin-left: -1.5rem;
