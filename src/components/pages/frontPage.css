@@ -140,29 +140,19 @@
 /* Scroll show style */
 .ScrollShow{
     position: absolute;
+    width: 100%;
     margin-top: 84vh;
-    margin-left: 45%;
     color: var(--object-primary-color);
-    animation: scroolAnimatedIcon infinite 0.4s linear;
+    animation: scroolAnimatedIcon infinite 0.5s linear;
     cursor: pointer;
+    text-align: center;
 }
-.ScrollShow ul li{
-    list-style: none;
-    display: inline-flex;
-    padding: .55rem;
+.ScrollShow #iconScroll{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 1.5rem;
 }
-.ScrollShow ul li p{
-    color:var(--color-text);
-}
-.ScrollShow ul li #iconScroll{
-    position: absolute;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-top: -.6rem;
-    margin-left: -.7rem;
-}
-.ScrollShow ul li #iconScroll:hover,
-.ScrollShow ul li p:hover, .ScrollShow:hover{
+#iconScroll:hover{
     color: var(--object-secundary-color);
     animation: none;
 }
@@ -203,6 +193,9 @@
 
 /* Media querys */
 @media screen and (max-width: 1066px) {
+    .ScrollShow{
+        display: none;
+    }
     .PresentationComponents{
         margin-left: 10vh;
     }

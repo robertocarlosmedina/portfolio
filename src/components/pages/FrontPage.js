@@ -75,11 +75,7 @@ const FrontPage = () =>{
           </div>
           <Link to="AboutMe" smooth={true} duration={1000}>
             <div className="ScrollShow">
-              <ul>
-                  <li><BiMouse id="iconScroll"/></li>
-                  <li><p>Scroll down</p></li>
-                  <li><IoIosArrowDown id="iconScroll"/></li>
-              </ul>
+              <BiMouse id="iconScroll"/>
             </div>
           </Link>
       </div>
