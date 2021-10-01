@@ -12,7 +12,7 @@ import { RiFileList3Fill,RiSendPlane2Fill, RiCloseFill } from 'react-icons/ri'
 
 import './header.css'
 
-const Header = (props) =>{
+const Header = () =>{
   const history = useHistory()
   // const { pathname } = useLocation();
   const [screenYPos, setScreenYPos] = useState(0)
@@ -66,19 +66,8 @@ const Header = (props) =>{
       }
   ])
   const [openMenu, setOpenMenu] = useState("none")
-  const [themeIcons, setThemeIcons] = useState([
-      { 
-        name:"Dark",
-        icon:HiSun,
-        active: true
-      },
-      {
-        name:"white",
-        icon: FaRegMoon,
-        active: false
-      }
-  ])
-  
+  const [theme, setTheme] = useState("dark")
+
   // This function is to control what off the nav links is open
   // to add a diferente color on it
   const navLinkLselected = (event) =>{
@@ -125,23 +114,12 @@ const Header = (props) =>{
   }
   // To control the icons occording to the theme in use
   const themeSwitcher = () =>{
-    const newthemeInstance = []
-    themeIcons.map((icon, i) =>{
-        if(icon.active){
-            icon.active = !icon.active
-            newthemeInstance.push(icon)
-        }
-        else{
-            icon.active = !icon.active
-            newthemeInstance.push(icon)
-        }
-        return icon
-    })
-    // to clean to array
-    setThemeIcons([])
-    // to refresh with the new instance
-    setThemeIcons(newthemeInstance)
-    // console.log(navcomponents)
+    if(theme==="dark"){
+      setTheme("light")
+    }
+    else{
+      setTheme("dark")
+    }
   }
   // To oppen the Mobile navegation Menu
   const openMobileMenu = () =>{
@@ -173,8 +151,9 @@ const Header = (props) =>{
   // window.addEventListener('scroll', changeLinkCOlorWhileScrolling)
   return (
     <div>
-      {/* {console.log(pathname)} */}
-      <div className={navBarBoarder ? "Header HeaderBorder" : "Header"}>
+      <div inUse-theme={`${theme}`}
+           className={navBarBoarder ? "Header HeaderBorder" : "Header"}
+      >
        <div className="HeaderComponents">
           <div className="Username">
             <h1>
@@ -207,14 +186,10 @@ const Header = (props) =>{
           </div>  
         </div>
           <div>
-            {themeIcons.map((ico, i) => (
-                <div className="HeaderIcon" key={i}>
-                    {ico.active && <ico.icon 
-                        className="ThemeIcon" 
-                        onClick={themeSwitcher}
-                    />}
-                </div>
-            ))}
+            <div className="HeaderIcon">
+                {theme === "dark" ? <HiSun className="ThemeIcon" onClick={themeSwitcher}/> : 
+                    <FaRegMoon className="ThemeIcon" onClick={themeSwitcher}/>}
+            </div>
           </div>
           {openMenu === "none" && <TiThMenu className="ThemeIcon" 
                     id="menuIcon"

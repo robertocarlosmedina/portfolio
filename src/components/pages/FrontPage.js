@@ -3,7 +3,6 @@ import { Link } from 'react-scroll'
 import { FaLinkedin, FaGithubSquare,FaWhatsappSquare } from 'react-icons/fa'
 import { MdArrowForward } from 'react-icons/md'
 import { BiMouse } from 'react-icons/bi'
-import { IoIosArrowDown } from 'react-icons/io'
 
 import ProfileImage from '../../assets/images/perfil.png'
 import './frontPage.css'

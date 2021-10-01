@@ -2,8 +2,8 @@ import { React, useState } from 'react'
 import { Link } from 'react-scroll'
 // import { Switch } from 'react-router'
 
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/navegation/Header'
+import Footer from './components/navegation/Footer'
 import PersonalLogo from './assets/images/personal.png'
 // import ScrollToTop from './components/ScrollToTop'
 // The pages

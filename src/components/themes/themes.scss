@@ -1,0 +1,24 @@
+:root{
+    --dark-background:#080A09;
+    --object-primary-color:#424242;
+    --object-primary-degra-1:#161616;
+    --object-primary-degra-2:#0D0D0D;
+    --object-secundary-color:#666666;
+    --object-therth-color:#252525;
+    --subtitle-color:#8D8D8D;
+    --primary-button-color:#3834ff;
+    --font-type:Roboto;
+    --border-color:#151515;
+    --border-color-2: #aaaaaa;
+    --color-text:#ffffff;
+    --default-color-text:#ffffff;
+    --color-text-1:#C1C1C1;
+    --color-alert:#ff6e6e;
+}
+
+[inUse-theme="light"]{
+    --dark-background:#ffffff;
+}
+[inUse-theme="dark"]{
+    --dark-background:#080A09;
+}
