@@ -42,9 +42,9 @@ const ContactMe = () =>{
       })
       if(allValidInput){
         emailjs.sendForm(
-              'service_pw8wq3k',
-              'template_5ht0lgo',event.target,
-              'user_1oyk9dgCbiScnLjxFWz2W').then(res=>{
+              'service_a2le9ek',
+              'template_v9rnymc',event.target,
+              'user_uXJdxtbEIp7P2PsuI7M1Z').then(res=>{
                 console.log(res)
               }).catch(err=>{
                 console.log(err)
@@ -108,11 +108,14 @@ const ContactMe = () =>{
                 </li>
                 <p></p>
                 <li>
+                  <button className="SendMessageButton">
                   <input type="submit"
                           value="Send Message"
-                          className="SendMessageButton"
+                          className="MessageButton"
                           // onClick={sendMessage}
                   />
+                  <MdSend className="SendIcon"/>
+                  </button>
                     {/* Send Message
                     <MdSend className="SendIcon"/> */}
                   {/* </button> */}

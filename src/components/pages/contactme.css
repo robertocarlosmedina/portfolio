@@ -54,9 +54,13 @@
 .Footer{
     margin-top: 8rem;
 }
+.ContactForm ul li button input{
+    background-color: transparent;
+    padding: 0rem;
+}
 .SendMessageButton{
     margin-top: -1rem;
-    width: 10rem;
+    width: 9.4rem;
     height: 3rem;
     text-align: left;
     padding-left: 1rem;
