@@ -59,7 +59,6 @@
 .HeaderIcon{
     position: absolute;
     margin-top: -2rem;
-    
     margin-left: 91.5%;
 }
 
@@ -86,11 +85,11 @@
     background-color: var(--dark-background);
     border: 1px solid var(--border-color);
     z-index: 30;
-    transition: display 3s ease;
 }
 .MobileMenu ul{
     margin-left: -1.5rem;
     margin-top: 3.5rem;
+    
 }
 .MobileMenu ul li{
     list-style: none;

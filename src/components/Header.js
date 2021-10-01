@@ -1,5 +1,6 @@
 import { React, useState }  from 'react'
 import {  useHistory } from 'react-router-dom'
+// import { useLocation } from "react-router-dom";
 import { Link } from 'react-scroll'
 import { HiSun } from 'react-icons/hi'
 import { FaRegMoon } from 'react-icons/fa'
@@ -13,6 +14,7 @@ import './header.css'
 
 const Header = (props) =>{
   const history = useHistory()
+  // const { pathname } = useLocation();
   const [screenYPos, setScreenYPos] = useState(0)
   // const [inUse, setInuse] = useState(false)
   const [navBarBoarder, SetNavBarBorder] = useState(false)
@@ -97,6 +99,7 @@ const Header = (props) =>{
         }
         return item
     })
+    setOpenMenu("none")
     // to clean to array
     setNavcomponents([])
     // to refresh with the new instance
@@ -164,12 +167,13 @@ const Header = (props) =>{
   const setpositionY = () =>{
     setScreenYPos(window.scrollY)
   }
-  console.log(props)
+  // console.log(props)
   window.addEventListener('scroll', addNavbarBorder)
   window.addEventListener('scroll', setpositionY)
   // window.addEventListener('scroll', changeLinkCOlorWhileScrolling)
   return (
     <div>
+      {/* {console.log(pathname)} */}
       <div className={navBarBoarder ? "Header HeaderBorder" : "Header"}>
        <div className="HeaderComponents">
           <div className="Username">

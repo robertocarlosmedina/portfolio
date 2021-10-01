@@ -48,6 +48,9 @@
     width: 25rem;
     height: 10rem;
 }
+.ContactForm ul li #Wrong{
+    border: 1px solid var(--color-alert);
+}
 .Footer{
     margin-top: 8rem;
 }

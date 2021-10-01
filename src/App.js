@@ -15,35 +15,35 @@ import ContactMe from './components/pages/ContactMe';
 import './App.css';
 
 function App() {
-  const [sessions] = useState([
+  const [sections] = useState([
     {
       linkName:"Frontpage",
-      Session: FrontPage,
+      Section: FrontPage,
       active:true
     },
     {
       linkName:"AboutMe",
-      Session: AboutMe,
+      Section: AboutMe,
       active:false
     },
     {
       linkName:"Skills",
-      Session: Skills,
+      Section: Skills,
       active:false
     },
     {
       linkName:"Services",
-      Session: Services,
+      Section: Services,
       active:false
     },
     {
       linkName:"Projects",
-      Session: Projects,
+      Section: Projects,
       active:false
     },
     {
       linkName:"Contact Me",
-      Session: ContactMe,
+      Section: ContactMe,
       active:false
     }  
   ])
@@ -52,10 +52,10 @@ function App() {
   return (
     <div className="App" >
       <Header />
-      {sessions.map((session, i) =>
-        <session key={i}>
-          <session.Session />
-        </session>
+      {sections.map((section, i) =>
+        <section key={i}>
+          <section.Section />
+        </section>
       )}
       <Footer />
     </div>

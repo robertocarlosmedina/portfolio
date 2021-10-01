@@ -1,8 +1,61 @@
-import React from "react";
+import { React, useState } from "react";
+import emailjs from 'emailjs-com'
 import { MdSend } from 'react-icons/md'
 import './contactme.css'
 
 const ContactMe = () =>{
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [project, setProject] = useState("")
+    const [message, setMessage] = useState("")
+    const [valid, setValid] = useState([true, true, true,true])
+
+    const nameChangeHandler = (event) =>{
+      setName(event.target.value)
+    }
+    const emailChangeHandler = (event) =>{
+      setEmail(event.target.value)
+    }
+    const projectChangeHandler = (event) =>{
+      setProject(event.target.value)
+    }
+    const messageChangeHandler = (event) =>{
+      setMessage(event.target.value)
+    }
+    
+    const sendMessage = (event) =>{
+      event.preventDefault() // o submit não e enviado um pedido para nenhum servidor
+      const newArray = []
+      let allValidInput = true
+      newArray.push((name !== "") ? true : false)
+      newArray.push((email !== "" && email.indexOf('@') > -1 
+                  && email.indexOf('.') > -1) ? true : false)
+      newArray.push((project !== "") ? true : false)
+      newArray.push((message !== "") ? true : false)
+      setValid([])
+      setValid(newArray)
+      valid.map((value) =>{
+        if(!value){
+          allValidInput = false
+        }
+        return value
+      })
+      if(allValidInput){
+        emailjs.sendForm(
+              'service_pw8wq3k',
+              'template_5ht0lgo',event.target,
+              'user_1oyk9dgCbiScnLjxFWz2W').then(res=>{
+                console.log(res)
+              }).catch(err=>{
+                console.log(err)
+              })
+        setProject("")
+        setName("")
+        setEmail("")
+        setMessage("")
+      }      
+    }
+
     return(
       <div className="GetInTouch" id="GetInTouch">
         <div className="Title">
@@ -11,30 +64,58 @@ const ContactMe = () =>{
         </div>
         <div className="Conteiner">
           <div>
-            <form className="ContactForm">
+            <form className="ContactForm" onSubmit={sendMessage}>
               <ul>
                 <li>
-                  <input placeholder="Name"className="smallInput"/>
-                </li>
-                <li>
-                  <input placeholder="Email"className="smallInput"/>
-                </li>
-                <li>
-                  <input placeholder="Project" 
-                         className="NormalInput"
+                  <input type="text"
+                         name="name"
+                         placeholder="Name"
+                         className="smallInput"
+                         id={!valid[0] ? "Wrong" : ""}
+                         value={name}
+                         onChange={nameChangeHandler}
                   />
                 </li>
                 <li>
-                  <textarea placeholder="Message"
-                         className="LargeInput"
+                  <input type="email"
+                         name="email"
+                         placeholder="Email"
+                         className="smallInput"
+                         id={!valid[1] ? "Wrong" : ""}
+                         value={email}
+                         onChange={emailChangeHandler}
+                  />
+                </li>
+                <li>
+                  <input type="text"
+                         name="project"
+                         placeholder="Project" 
+                         className="NormalInput"
+                         value={project}
+                         id={!valid[2] ? "Wrong" : ""}
+                         onChange={projectChangeHandler}
+                  />
+                </li>
+                <li>
+                  <textarea type="text"
+                            name="message"
+                            placeholder="Message"
+                            className="LargeInput"
+                            value={message}
+                            id={!valid[3] ? "Wrong" : ""}
+                            onChange={messageChangeHandler}
                   />
                 </li>
                 <p></p>
                 <li>
-                  <button className="SendMessageButton">
-                    Send Message
-                    <MdSend className="SendIcon"/>
-                  </button>
+                  <input type="submit"
+                          value="Send Message"
+                          className="SendMessageButton"
+                          // onClick={sendMessage}
+                  />
+                    {/* Send Message
+                    <MdSend className="SendIcon"/> */}
+                  {/* </button> */}
                 </li>
               </ul>
             </form>

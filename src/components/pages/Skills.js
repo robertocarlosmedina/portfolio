@@ -95,7 +95,7 @@ const Skills = () =>{
       },
     ]) 
     const showDropInfo = (event) =>{
-      console.log(event)
+      // console.log(event)
       const newArray = []
       skillsList.map((skill, i) =>{
         if(event.target.textContent === skill.name){
