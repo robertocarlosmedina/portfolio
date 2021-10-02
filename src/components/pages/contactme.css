@@ -3,12 +3,14 @@
     width: 100%;
     height: 100vh;
     font-family: 'Ubuntu', 'Serif';
+    background-color: var(--dark-background);
 }
 .GetInTouch .Conteiner{
     position: absolute;
     width: 100%;
-    height: 20rem;
+    height: 40rem;
     margin-top: 12rem;
+    background-color: var(--dark-background);
 }
 .GetInTouch .Conteiner div{
     width: 80%;
@@ -36,7 +38,7 @@
     border-radius: 10px;
     border: 1px solid transparent;
     background-color: var(--object-primary-color);
-    color: var(--color-text);
+    color: var(--default-color-text);
 }
 .ContactForm ul li .NormalInput{
     width: 25rem;
@@ -49,7 +51,7 @@
     height: 10rem;
 }
 .ContactForm ul li #Wrong{
-    border: 1px solid var(--color-alert);
+    border: 2px solid var(--color-alert);
 }
 .Footer{
     margin-top: 8rem;
@@ -76,6 +78,7 @@
     height: 18px;
     position: absolute;
     margin-left: .55rem;
+    color: var(--default-color-text);
     transition: transform .5s ease;
 }
 .SendMessageButton:hover{
@@ -83,7 +86,7 @@
     border: 1px solid  var(--object-primary-color);
 }
 .SendMessageButton:hover .SendIcon{
-    color: var(--color-text);
+    color: var(--default-color-text);
     transform: translateX(10px);
 }
 

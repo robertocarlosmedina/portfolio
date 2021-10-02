@@ -3,15 +3,18 @@
     width: 100%;
     margin-top: 70rem;
     margin-bottom: 100vh;
+    background-color: var(--dark-background);
 }
 .GetInTouch{
-    margin-top: 65rem;
+    margin-top: 37rem;
+    background-color: var(--dark-background);
 }
 
 .Publicity div{
     /* position: absolute; */
     width: 100%;
     height: 40rem;
+    background-color: var(--dark-background);
     /* background-color: aqua; */
 }
 .Publicity div div{
@@ -25,7 +28,8 @@
     margin-right: auto;
     /* padding: 2rem; */
     border-radius: 20px;
-    background-color: var(--object-primary-color);
+    background-color: var(--conteiner-color);
+    color: var(--default-color-text);
 }
 
 .Publicity div div img{
@@ -38,6 +42,7 @@
     margin-top: 3rem;
     margin-left: 2rem;
     font-size: 1.75rem;
+    color: var(--default-color-text);
 }
 .Publicity div div h2{
     width: 30rem;
@@ -55,7 +60,7 @@
     margin-left: 2rem;
     font-size: .85rem;
     background-color: var(--primary-button-color);
-    color: var(--color-text);
+    color: var(--default-color-text);
     border: 1px solid transparent;
     cursor: pointer;
 }
@@ -65,14 +70,15 @@
     margin-top: .1rem;
     margin-left: .5rem;
     transition: transform 0.5s ease;
+    color: var(--default-color-text);
 }
 .Publicity .Button:hover {
-    color: var(--color-text-1);
+    color: var(--object-secundary-color);
     border: 1px solid var(--object-secundary-color);
 }
 .Publicity .Button:hover .ForwardIcon-1{ 
     transform: translateX(10px);
-    color: var(--color-text);
+    color: var(--default-color-text);
 }
 
 @media screen and (max-width: 877px ) {

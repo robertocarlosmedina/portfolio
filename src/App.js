@@ -18,6 +18,7 @@ import './App.css';
 
 function App() {
   const [showPersonalLogo, setShowPersonalLogo] = useState(false)
+  const [theme, setTheme] = useState("dark")
   const [sections] = useState([
     {
       linkName:"Frontpage",
@@ -61,12 +62,22 @@ function App() {
       setShowPersonalLogo(false)
     }
   }
+  // To control the icons occording to the theme in use
+  const themeSwitcher = () =>{
+    if(theme==="dark"){
+      setTheme("light")
+    }
+    else{
+      setTheme("dark")
+    }
+    // console.log(theme)
+  }
 
   window.addEventListener('scroll', addPersonalIcon)
 
   return (
-    <div className="App" >
-      <Header />
+    <div className="App" inusetheme={`${theme}`}>
+      <Header changeThemeHandler={themeSwitcher} theme={theme}/>
       {showPersonalLogo && <Link to={'Frontpage'} 
             smooth={true} 
             duration={1400}

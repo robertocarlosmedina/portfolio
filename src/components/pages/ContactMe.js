@@ -89,7 +89,7 @@ const ContactMe = () =>{
                 <li>
                   <input type="text"
                          name="project"
-                         placeholder="Project" 
+                         placeholder="Project name" 
                          className="NormalInput"
                          value={project}
                          id={!valid[2] ? "Wrong" : ""}
@@ -99,7 +99,7 @@ const ContactMe = () =>{
                 <li>
                   <textarea type="text"
                             name="message"
-                            placeholder="Message"
+                            placeholder="Message..."
                             className="LargeInput"
                             value={message}
                             id={!valid[3] ? "Wrong" : ""}

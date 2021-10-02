@@ -7,12 +7,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--dark-background);
+  background-color: transparent;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.Header,
+.GetInTouch,
+.Frontpage,
+.Projects,
+.Services,
+.Publicity,
+.Skills,
+.ServicesPage,
+.ProjectsConteiner,
+.GetInTouch .Conteiner{
+  transition: background .5s ease-in-out;
 }
 h1{
   color:var(--color-text);

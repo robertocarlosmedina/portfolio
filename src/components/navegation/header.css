@@ -30,7 +30,7 @@
     margin-left:3rem;
     color: var(--color-text);
     text-decoration: none;
-    text-underline-offset: none;
+    /* text-underline-offset: none; */
 }
 /* links to the navegation */
 .Links{
@@ -41,19 +41,17 @@
     display: inline-block;
     margin-right: 2rem;
     text-decoration: none;
-    color:var(--white-letter);
+    color:var(--color-text);
 }
 #navLink{
-    text-decoration: none;
-    color:var(--white-letter);
+    color:var(--color-text);
 }
 #activeNavLink{
-    text-decoration: none;
     color:var(--object-secundary-color)
 }
 .Links ul li:hover{
     color: var(--object-secundary-color);
-    font-style: bold;
+    /* font-style: bold; */
     cursor:pointer;
 }
 

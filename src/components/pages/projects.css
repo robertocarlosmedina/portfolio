@@ -1,15 +1,19 @@
 .Projects{
     /* position: absolute; */
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     font-family: 'Ubuntu', 'Serif';
     /* margin-top: 15rem; */
+    height: 70rem;
+    background-color: var(--dark-background);
 }
 .ProjectsConteiner{
     position: absolute;
     width: 100%;
+    
     margin-top: 12.5rem;
     margin-left: -1.5rem;
+    background-color: var(--dark-background);
 }
 .ProjectsConteiner .ProjectCard{
     width: 70%;
@@ -35,7 +39,7 @@
     font-size: 1.5rem;
 }
 .ProjectsConteiner .ProjectCard li div p{
-    color: var(--color-text);
+    color: var(--default-color-text);
     width: 13rem;
     overflow: hidden;
 }
@@ -43,7 +47,7 @@
     width: 8rem;
     height: 2.5rem;
     background-color: var(--primary-button-color);
-    color: var(--color-text);
+    color: var(--default-color-text);
     border: 1px solid transparent;
     border-radius: 10px;
     text-align: left;
@@ -51,18 +55,17 @@
     cursor: pointer;
 }
 .ProjectsConteiner .ProjectCard li div button .ForwardIcon{
-    /* position: absolute; */
-    margin-top: .13rem;
+    margin-top: .1rem;
     margin-left: .5rem;
     transition: transform 0.5s ease;
 }
 .ProjectsConteiner .ProjectCard li div button:hover {
-    color: var(--color-text-1);
+    color: var(--object-secundary-color);
     border: 1px solid var(--object-secundary-color);
 }
 .ProjectsConteiner .ProjectCard li div button:hover .ForwardIcon{ 
     transform: translateX(10px);
-    color: var(--color-text);
+    color: var(--default-color-text);
 }
 .ProjectCard .Card{
     width: 16rem;
@@ -92,7 +95,7 @@
     z-index: 6;
 }
 .ProjectCard  li:hover  h1{
-    color: var(--color-text);
+    color: var(--default-color-text);
     transform: translateX(12.5rem);
 } 
 .ProjectsConteiner .ProjectCard li:hover div p{
@@ -112,15 +115,14 @@
     background: transparent;
     border: 1px solid var(--border-color);
     transition:  background .8s ease-in-out;
-     
     z-index: 0;
 }
 .ProjectCard li:hover div .OpacityEffect{
-    background:var(--dark-background);
+    background:var(--dark);
     opacity: 0.8;
 }
 .ProjectsConteiner li div:hover  h1{
-    color: var(--color-text);
+    color: var(--default-color-text);
 }
 
 /* Media querys */

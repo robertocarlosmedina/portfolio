@@ -3,11 +3,13 @@
     height: 100vh;
     font-family: 'Ubuntu', 'Serif';
     margin-top: -2rem;
+    background-color: var(--dark-background);
 }
 .ServicesPage{
     position: absolute;
     margin-top: 10rem;
     width: 100%;
+    background-color: var(--dark-background);
 }
 .ServicesPage div{
     width: 80%;
@@ -45,12 +47,14 @@
     font-size: 1.22rem;
     text-align: center;
     font-style: bold;
+    color: var(--color-text);
 }
 .Sub_conteiner{
     position: relative;
     width: 20rem;
     margin-top: 13rem;
     transition: transform .5s ease-in-out;
+    
 }
 .ServicesElements li:hover .Sub_conteiner{
     transform: translateY(-22rem);
@@ -85,6 +89,7 @@
     margin-left: -1.5rem;
 }
 .SubServices div{
+    color: var(--default-color-text);
     width: 13rem;
     margin-left: -1.5rem;
     margin-top: 0rem;

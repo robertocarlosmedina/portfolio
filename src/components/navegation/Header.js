@@ -12,7 +12,7 @@ import { RiFileList3Fill,RiSendPlane2Fill, RiCloseFill } from 'react-icons/ri'
 
 import './header.css'
 
-const Header = () =>{
+const Header = (props) =>{
   const history = useHistory()
   // const { pathname } = useLocation();
   const [screenYPos, setScreenYPos] = useState(0)
@@ -66,12 +66,11 @@ const Header = () =>{
       }
   ])
   const [openMenu, setOpenMenu] = useState("none")
-  const [theme, setTheme] = useState("dark")
 
   // This function is to control what off the nav links is open
   // to add a diferente color on it
   const navLinkLselected = (event) =>{
-    console.log(event)
+    // console.log(event)
     const newComponentsInstance = []
     // console.log(event.target)
     navcomponents.map((item, i) =>{
@@ -112,15 +111,7 @@ const Header = () =>{
     // console.log(navcomponents)
     goToLink("")
   }
-  // To control the icons occording to the theme in use
-  const themeSwitcher = () =>{
-    if(theme==="dark"){
-      setTheme("light")
-    }
-    else{
-      setTheme("dark")
-    }
-  }
+
   // To oppen the Mobile navegation Menu
   const openMobileMenu = () =>{
     setOpenMenu("block")
@@ -145,15 +136,16 @@ const Header = () =>{
   const setpositionY = () =>{
     setScreenYPos(window.scrollY)
   }
+  const onChangeTheme = () =>{
+    props.changeThemeHandler()
+  }
   // console.log(props)
   window.addEventListener('scroll', addNavbarBorder)
   window.addEventListener('scroll', setpositionY)
   // window.addEventListener('scroll', changeLinkCOlorWhileScrolling)
   return (
     <div>
-      <div inUse-theme={`${theme}`}
-           className={navBarBoarder ? "Header HeaderBorder" : "Header"}
-      >
+      <div className={navBarBoarder ? "Header HeaderBorder" : "Header"}>
        <div className="HeaderComponents">
           <div className="Username">
             <h1>
@@ -187,8 +179,8 @@ const Header = () =>{
         </div>
           <div>
             <div className="HeaderIcon">
-                {theme === "dark" ? <HiSun className="ThemeIcon" onClick={themeSwitcher}/> : 
-                    <FaRegMoon className="ThemeIcon" onClick={themeSwitcher}/>}
+                {props.theme === "dark" ? <HiSun className="ThemeIcon" onClick={onChangeTheme}/> : 
+                    <FaRegMoon className="ThemeIcon" onClick={onChangeTheme}/>}
             </div>
           </div>
           {openMenu === "none" && <TiThMenu className="ThemeIcon" 

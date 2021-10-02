@@ -1,7 +1,7 @@
 .Footer{
     width: 100%;
     font-family: 'Ubuntu', 'Serif';
-    color: var(--color-text);
+    color: var(--default-color-text);
     
 }
 .Footer .FooterPage{
@@ -22,10 +22,13 @@
     
 }
 
-.Footer .FooterList .List_Element h2{
-    margin-top: 4rem;
+.Footer .FooterList li div h2{
+    margin-top: 1rem;
     width: 16rem;
-    
+    color: var(--subtitle-color);
+}
+.Footer .FooterList li div h1{
+    color: var(--default-color-text);
 }
 .FooterContactList{
     margin-top: 2rem;
