@@ -115,11 +115,11 @@
     .AboutMe{
         background-color: var(--conteiner-color);
     }
-    .Title h1{
+    .AboutMe .Title h1{
         color: var(--default-color-text);
     }
-    .Title h2{
-        color: var(--subtitle-color);
+    .AboutMe .Title h2{
+        color: var(--object-secundary-color);
     }
     .AboutmeConteiner .Conteiner-1{
         margin-left: -20rem;
@@ -270,6 +270,32 @@
         margin-top: 5vh;
         margin-left: 143%;
     }  
+    @media screen and (max-height: 480px) {
+        .AboutmeConteiner .Conteiner-1 .AboutText{
+            width: 14rem;
+            margin-top: -8rem;
+             margin-left: 135%;
+         }
+    }
+    @media screen and (max-height: 450px) {
+        .AboutmeConteiner .Conteiner-1 .AboutText{
+            width: 14rem;
+            margin-top: -7rem;
+             margin-left: 135%;
+         }
+    }
+    @media screen and (max-height: 400px) {
+        .AboutmeConteiner .Conteiner-1 .AboutText{
+            width: 14rem;
+            margin-top: -6rem;
+             margin-left: 135%;
+         }
+        .AboutmeConteiner  .CVDownloader{
+            position: absolute;
+            margin-top: 3rem !important;
+            margin-left: 143%;
+        }  
+    }
 }  
 
 @media screen and (max-width: 260px) {
@@ -279,6 +305,18 @@
      }
     .AboutmeConteiner  .CVDownloader{
         margin-top: 5vh;
+        margin-left: 155%;
+    }
+}
+@media screen and (max-width: 245px) {
+    .AboutmeConteiner  .CVDownloader{
+        margin-top: 5vh;
+        margin-left: 150%;
+    }
+}
+@media screen and (max-width: 236px) {
+    .AboutmeConteiner .Conteiner-1 .AboutText{
+        width: 11rem;
         margin-left: 155%;
     }
 }

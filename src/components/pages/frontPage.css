@@ -368,7 +368,27 @@
         to {
             margin-top: 16vh;
         }
-      }
+    }
+    @media screen and (max-height: 470px) {
+        .FrontAnimation #primaryLosangle{
+            width: 6rem;
+            height: 6rem;
+        }
+        .ProfileImage{
+            width: 8rem;
+            height: 8rem;
+        }
+        .FrontAnimation #secondLosangle{
+            width: 3rem;
+            height: 3rem;
+            margin-top: 13vh;
+            margin-left: 1.5rem;
+        }
+        .FrontAnimation{
+            margin-top: 10vh;
+            margin-left: 46%;
+        }
+    }
 }
 
 @media screen and (max-width: 380px) {

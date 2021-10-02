@@ -18,6 +18,15 @@
 .PersonalLogo:hover{
   border: 1px solid var(--object-secundary-color);
 }
+
+@media screen and (max-width: 660px) {
+  .PersonalLogo{
+    width: 1.75rem;
+    height: 1.75rem;
+    right: 1rem;
+  }
+}
+
 /* @media (prefers-reduced-motion: no-preference) {
   .PersonalLogo{
     animation: App-logo-spin infinite .9s linear;

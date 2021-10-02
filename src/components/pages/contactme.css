@@ -17,6 +17,15 @@
     margin-left: auto;
     margin-right: auto;
 }
+.MailStatus{
+    padding: 1rem;
+}
+.SuccessSent{
+    color: var(--color-success);
+}
+.ErrorSent{
+    color: var(--color-alert);
+}
 .ContactForm {
     width:70%;
     /* margin-left: -9rem; */

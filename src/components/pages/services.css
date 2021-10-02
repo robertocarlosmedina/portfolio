@@ -162,3 +162,8 @@
         }
     }
 }
+@media screen and (max-width:650px) {
+    .ServicesPage{
+        margin-top: 6rem;
+    }
+}

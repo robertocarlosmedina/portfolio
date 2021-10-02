@@ -8,6 +8,9 @@ const ContactMe = () =>{
     const [email, setEmail] = useState("")
     const [project, setProject] = useState("")
     const [message, setMessage] = useState("")
+    const [success, setSuccess] = useState(false)
+    const [error, setError] = useState(false)
+    const [missingFields, setMissingFields] = useState(false)
     const [valid, setValid] = useState([true, true, true,true])
 
     const nameChangeHandler = (event) =>{
@@ -45,15 +48,28 @@ const ContactMe = () =>{
               'service_a2le9ek',
               'template_v9rnymc',event.target,
               'user_uXJdxtbEIp7P2PsuI7M1Z').then(res=>{
+                if(res.status === 200){
+                  setSuccess(true)
+                  setError(false)
+                  setMissingFields(false)
+                }
                 console.log(res)
               }).catch(err=>{
+                setSuccess(false)
+                setError(true)
+                setMissingFields(false)
                 console.log(err)
               })
         setProject("")
         setName("")
         setEmail("")
         setMessage("")
-      }      
+      }    
+      else{
+        setSuccess(false)
+        setError(false)
+        setMissingFields(true)
+      }  
     }
 
     return(
@@ -64,6 +80,9 @@ const ContactMe = () =>{
         </div>
         <div className="Conteiner">
           <div>
+            {success && <p className="MailStatus SuccessSent">Successfully sent</p>}
+            {error &&<p className="MailStatus ErrorSent">Error while sending</p>}
+            {missingFields && <p className="MailStatus ErrorSent">Error missing fields</p>}
             <form className="ContactForm" onSubmit={sendMessage}>
               <ul>
                 <li>

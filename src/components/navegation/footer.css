@@ -80,6 +80,9 @@
     .Footer .FooterList li{
         width: 10rem;
     }
+    .Footer .FooterList li div h2{
+        width: 10rem;
+    }
 }
 @media screen and (max-height:511px) {
     .Footer .FooterPage{
