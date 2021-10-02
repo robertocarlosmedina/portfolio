@@ -14,9 +14,11 @@
     text-align: left;
 }
 .PresentationComponents h1{
+    /* position: absolute; */
     font-weight: 600;
     font-size: 3rem;
     font-style:bold;
+    animation: title-animation 4s both;
 }
 .secondHeader{
     width: 100%;
@@ -25,11 +27,13 @@
 .PresentationComponents h2{
     margin-top: -1.5rem;
     margin-bottom: 2rem;
+    animation: subtitle-animation 5s both;
 }
 .PresentationComponents .PresentationText{
     width: 65vh;
     height: 15vh;
     font-size: 1rem;
+    animation: text-animation 8s both;
 }
 .ContactMe{
     position: absolute;
@@ -49,6 +53,7 @@
     color:var(--default-color-text);
     border: 1px solid transparent;
     cursor: pointer;
+    animation: button-animation 2s both;
 }
 .ContactMe #contactButton .ForwardIcon-2{
     position: absolute;
@@ -74,6 +79,7 @@
     margin-top: 30vh;
     margin-left: 60%;
     background-color: cornflowerblue;
+    animation: front-animation 4s both;
 }
 .FrontAnimation #primaryLosangle,
 .FrontAnimation #secondLosangle,
@@ -159,6 +165,55 @@
 }
 
 /* Keyframes to animate the image display */
+@keyframes title-animation {
+    from {
+      transform: translateX(-20rem);
+      opacity: 0;
+    }
+    to {
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+  }
+@keyframes subtitle-animation {
+  from {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  to {
+      transform: translateY(0rem);
+      opacity: 1;
+  }
+}
+@keyframes button-animation {
+    from {
+      transform: translateY(10rem);
+      opacity: 0;
+    }
+    to {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+  }
+@keyframes text-animation {
+    from {
+      opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes front-animation {
+  from {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
 @keyframes upDownAnimation-1 {
     from {
       margin-top: 0vh;

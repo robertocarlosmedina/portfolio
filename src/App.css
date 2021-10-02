@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   margin:0 auto;
+  background-color: var(--dark-background);
 }
 .PersonalLogo{
   width: 2.75rem;

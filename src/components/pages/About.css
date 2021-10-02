@@ -113,7 +113,13 @@
 
 @media screen and (max-width: 873px) {
     .AboutMe{
-        background-color: var(--object-secundary-color);
+        background-color: var(--conteiner-color);
+    }
+    .Title h1{
+        color: var(--default-color-text);
+    }
+    .Title h2{
+        color: var(--subtitle-color);
     }
     .AboutmeConteiner .Conteiner-1{
         margin-left: -20rem;
