@@ -54,6 +54,7 @@
     border: 1px solid transparent;
     cursor: pointer;
     animation: button-animation 2s both;
+    box-shadow: -3px 3px 10px var(--shadow-color);
 }
 .ContactMe #contactButton .ForwardIcon-2{
     position: absolute;

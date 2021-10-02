@@ -30,6 +30,7 @@
     border-radius: 20px;
     background-color: var(--conteiner-color);
     color: var(--default-color-text);
+    box-shadow: 4px 4px 20px var(--default-shadow-color);
 }
 
 .Publicity div div img{
@@ -62,6 +63,7 @@
     background-color: var(--primary-button-color);
     color: var(--default-color-text);
     border: 1px solid transparent;
+    box-shadow: -4px 4px 10px var(--default-shadow-color);
     cursor: pointer;
 }
 

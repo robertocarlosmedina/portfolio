@@ -77,6 +77,7 @@
     padding-left: 1rem;
     background-color: var(--primary-button-color);
     color: var(--color-text);
+    box-shadow: -4px 4px 10px var(--shadow-color);
     border: 1px solid transparent;
     border-radius: 8px;
     font-size: .9rem;

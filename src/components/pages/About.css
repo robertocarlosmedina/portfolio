@@ -38,6 +38,7 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 1.5rem;
+    box-shadow: 4px 4px 20px var(--default-shadow-color);
     background-color: var(--conteiner-color);
 }
 .AboutmeConteiner .Conteiner-1 .AboutText{
@@ -90,6 +91,7 @@
 .AboutmeConteiner  .CVDownloader a{
     width: 9rem;
     background-color: var(--primary-button-color);
+    box-shadow: -4px 4px 10px var(--default-shadow-color);
     color: var(--default-color-text);
     padding: 1rem;
     border-radius: 10px;
