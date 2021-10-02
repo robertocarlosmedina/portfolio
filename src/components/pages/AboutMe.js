@@ -30,11 +30,13 @@ const AboutMe = () =>{
         <div className="AboutmeConteiner">
           <div className="Conteiner-1">
             <div className="AboutText">
-              <p>High level of software development,
-                leading throughout its life cycle, 
-                from the development of the back-end to the 
-                front-end. And also experienced in systems 
-                development.
+            
+              <p>Young Software Developer, 
+                  with an extensive level of knowledge and 
+                  some experience time, working with web 
+                  technologies and information technologies 
+                  and telecommunications, delivering quality 
+                  work.
               </p>
             </div>
             <div className="AboutStatistic">

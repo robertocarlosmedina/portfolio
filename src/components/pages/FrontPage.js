@@ -33,9 +33,9 @@ const FrontPage = () =>{
             <h1>Hello, I'm Roberto</h1>
             <div className="secondHeader"><h2>Software Engineering and Telecommunications Student</h2></div>
             <div className="PresentationText">
-              <p>High level of software development, leading throughout its 
-                 life cycle, from the development of the back-end to the 
-                 front-end.
+              <p>High level of software development
+                throughout its life cycle, 
+                working with quality and efficiency.
               </p>  
             </div>
             <div className="ContactMe">
