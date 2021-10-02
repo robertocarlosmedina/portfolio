@@ -29,7 +29,6 @@ const ContactMe = () =>{
     const sendMessage = (event) =>{
       event.preventDefault() // o submit não e enviado um pedido para nenhum servidor
       const newArray = []
-      let allValidInput = true
       newArray.push((name !== "") ? true : false)
       newArray.push((email !== "" && email.indexOf('@') > -1 
                   && email.indexOf('.') > -1) ? true : false)
@@ -37,13 +36,9 @@ const ContactMe = () =>{
       newArray.push((message !== "") ? true : false)
       setValid([])
       setValid(newArray)
-      valid.map((value) =>{
-        if(!value){
-          allValidInput = false
-        }
-        return value
-      })
-      if(allValidInput){
+
+      if((name !== "")&&(email !== "" && email.indexOf('@'))
+                &&(project !== "")&&(message !== "")){
         emailjs.sendForm(
               'service_a2le9ek',
               'template_v9rnymc',event.target,
@@ -53,12 +48,12 @@ const ContactMe = () =>{
                   setError(false)
                   setMissingFields(false)
                 }
-                console.log(res)
+                // console.log(res)
               }).catch(err=>{
                 setSuccess(false)
                 setError(true)
                 setMissingFields(false)
-                console.log(err)
+                // console.log(err)
               })
         setProject("")
         setName("")

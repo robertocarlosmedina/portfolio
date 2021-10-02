@@ -66,7 +66,7 @@
     border: 1px solid var(--border-color-2);
 }
 #contactButton:hover .ForwardIcon-2{
-    color:var(--color-text);
+    color:var(--default-color-text);
     transform: translateX(10px);
 }
 
@@ -167,7 +167,7 @@
 /* Keyframes to animate the image display */
 @keyframes title-animation {
     from {
-      transform: translateX(-20rem);
+      transform: translateX(-30rem);
       opacity: 0;
     }
     to {
@@ -177,7 +177,7 @@
   }
 @keyframes subtitle-animation {
   from {
-    transform: translateY(1rem);
+    transform: translateY(2rem);
     opacity: 0;
   }
   to {

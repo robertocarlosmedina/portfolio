@@ -1,4 +1,5 @@
 import { React, useState } from 'react'
+import {  useHistory } from 'react-router-dom'
 import { Link } from 'react-scroll'
 // import { Switch } from 'react-router'
 
@@ -17,6 +18,7 @@ import ContactMe from './components/pages/ContactMe';
 import './App.css';
 
 function App() {
+  const history = useHistory()
   const [showPersonalLogo, setShowPersonalLogo] = useState(false)
   const [theme, setTheme] = useState("dark")
   const [sections] = useState([
@@ -55,7 +57,7 @@ function App() {
   // Controlin y on the windows
   const addPersonalIcon = () =>{
     // changeLinkCOlorWhileScrolling()
-    if(window.scrollY >= 80){
+    if(window.scrollY >= 90){
       setShowPersonalLogo(true)
     }
     else{
@@ -72,18 +74,22 @@ function App() {
     }
     // console.log(theme)
   }
+  const changePath = () =>{
+    history.push("/")
+  }
 
   window.addEventListener('scroll', addPersonalIcon)
 
   return (
     <div className="App" inusetheme={`${theme}`}>
       <Header changeThemeHandler={themeSwitcher} theme={theme}/>
-      {showPersonalLogo && <Link to={'Frontpage'} 
+      <Link to={'Frontpage'} 
             smooth={true} 
             duration={1400}
+            onClick={changePath}
       >
-        <img src={PersonalLogo} className="PersonalLogo" alt="Personal logo"/>
-      </Link>}
+                <img src={PersonalLogo} className={showPersonalLogo ? "PersonalLogoIn" :  "PersonalLogoOut"} alt="Personal logo"/>
+      </Link>
       {sections.map((section, i) =>
         <section key={i}>
           <section.Section />
@@ -95,5 +101,6 @@ function App() {
   );
 }
 
+// npm run deploy to deploy it on github pages
 export default App;
  

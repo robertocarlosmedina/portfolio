@@ -105,7 +105,7 @@
     transition: transform .5s ease;
 }
 .AboutmeConteiner  .CVDownloader a:hover .DownloadIcon{
-    color: var(--color-text);
+    color: var(--default-color-text);
     transform: translateY(2px);
 }
 

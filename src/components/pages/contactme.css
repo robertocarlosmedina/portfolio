@@ -18,7 +18,7 @@
     margin-right: auto;
 }
 .MailStatus{
-    padding: 1rem;
+    padding: .5rem;
 }
 .SuccessSent{
     color: var(--color-success);
@@ -141,6 +141,17 @@
         width: 20rem;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .ContactForm{
+        margin-top: 1rem;
+    }
+    .MailStatus{
+        /* width: 100%; */
+        /* position: absolute; */
+        margin-top: -5rem;
+    }
+}
 @media screen and (max-width: 468px) {
     .ContactForm ul li .NormalInput{
         width: 12rem;
@@ -153,11 +164,6 @@
     .LargeInput{
         width: 12rem;
         margin-left: -1rem;
-    }
-}
-@media screen and (max-width: 650px) {
-    .ContactForm{
-        margin-top: -5rem;
     }
 }
 @media screen and (max-width: 358px) {

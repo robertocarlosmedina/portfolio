@@ -15,7 +15,7 @@ import './header.css'
 const Header = (props) =>{
   const history = useHistory()
   // const { pathname } = useLocation();
-  const [screenYPos, setScreenYPos] = useState(0)
+  // const [screenYPos, setScreenYPos] = useState(0)
   // const [inUse, setInuse] = useState(false)
   const [navBarBoarder, SetNavBarBorder] = useState(false)
   const [navcomponents, setNavcomponents] = useState([
@@ -25,8 +25,8 @@ const Header = (props) =>{
         linkTo:"AboutMe",
         id:"navLink",
         active: false,
-        minposition:114,
-        maxposition:798
+        // minposition:114,
+        // maxposition:798
       },
       {
         name:"Skills",
@@ -34,8 +34,8 @@ const Header = (props) =>{
         linkTo:"Skills",
         id:"navLink",
         active: false,
-        minposition:798,
-        maxposition:1254
+        // minposition:798,
+        // maxposition:1254
       },
       {
         name:"Services",
@@ -43,8 +43,8 @@ const Header = (props) =>{
         linkTo:"Services",
         id:"navLink",
         active: false,
-        minposition:1254,
-        maxposition:1824
+        // minposition:1254,
+        // maxposition:1824
       },
       {
         name:"Projects",
@@ -52,8 +52,8 @@ const Header = (props) =>{
         linkTo:"Projects",
         id:"navLink",
         active: false,
-        minposition:1824,
-        maxposition:2480
+        // minposition:1824,
+        // maxposition:2480
       },
       {
         name:"Contact",
@@ -61,8 +61,8 @@ const Header = (props) =>{
         linkTo:"GetInTouch",
         id:"navLink",
         active: false,
-        minposition:2480,
-        maxposition:3700
+        // minposition:2480,
+        // maxposition:3700
       }
   ])
   const [openMenu, setOpenMenu] = useState("none")
@@ -121,7 +121,7 @@ const Header = (props) =>{
     setOpenMenu("none")
   }
   const goToLink = (link) =>{
-    history.push(`/${link}`)
+    history.push(`/#${link}`)
   }
   // Controlin y on the windows
   const addNavbarBorder = () =>{
@@ -133,15 +133,15 @@ const Header = (props) =>{
       SetNavBarBorder(false)
     }
   }
-  const setpositionY = () =>{
-    setScreenYPos(window.scrollY)
-  }
+  // const setpositionY = () =>{
+  //   setScreenYPos(window.scrollY)
+  // }
   const onChangeTheme = () =>{
     props.changeThemeHandler()
   }
   // console.log(props)
   window.addEventListener('scroll', addNavbarBorder)
-  window.addEventListener('scroll', setpositionY)
+  // window.addEventListener('scroll', setpositionY)
   // window.addEventListener('scroll', changeLinkCOlorWhileScrolling)
   return (
     <div>
@@ -164,8 +164,7 @@ const Header = (props) =>{
               {navcomponents.map((navItem, i) => (
                 <li key={i} >
                     <Link to={`${navItem.linkTo}`} 
-                          id={screenYPos >= navItem.minposition 
-                            && screenYPos < navItem.maxposition ? "activeNavLink" : `${navItem.id}`}
+                          id={`${navItem.id}`}
                           smooth={true} 
                           duration={1000}
                           onClick={navLinkLselected}

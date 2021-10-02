@@ -3,7 +3,8 @@
   margin:0 auto;
   background-color: var(--dark-background);
 }
-.PersonalLogo{
+.PersonalLogoIn,
+.PersonalLogoOut{
   width: 2.75rem;
   height: 2.75rem;
   position:fixed;
@@ -14,30 +15,61 @@
   border: 1px solid var(--color-text);
   transition: border .2s ease-in-out;
   cursor: pointer;
+  
 }
-.PersonalLogo:hover{
+.PersonalLogoIn{
+  animation: App-logo-spin-fadeIn 1s both;
+}
+.PersonalLogoOut{
+  animation: App-logo-spin-fadeOut 1s both;
+}
+.PersonalLogoIn:hover,
+.PersonalLogoOut:hover{
   border: 1px solid var(--object-secundary-color);
 }
 
+::-webkit-scrollbar{
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: var(--scroll-bar-color);
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--scroll-bar-color-1);
+  border-radius: .5rem;
+
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: var(--object-secundary-color);
+}
+
+
 @media screen and (max-width: 660px) {
-  .PersonalLogo{
+  .PersonalLogoIn,
+  .PersonalLogoOut{
     width: 1.75rem;
     height: 1.75rem;
     right: 1rem;
   }
 }
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .PersonalLogo{
-    animation: App-logo-spin infinite .9s linear;
-  }
-}
-
-@keyframes App-logo-spin {
+@keyframes App-logo-spin-fadeIn {
   from {
-    transform: translateY(0rem);
+    transform: translateX(3rem);
+    opacity: 0;
   }
   to {
-    transform: translateY(-.1rem);
+    transform: translateX(0rem);
+    opacity: 1;
   }
-} */
+} 
+@keyframes App-logo-spin-fadeOut {
+  from {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(3rem);
+    opacity: 0;
+    display: none;
+  }
+} 
+

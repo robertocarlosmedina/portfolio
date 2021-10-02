@@ -69,6 +69,7 @@
     .Copyright{
         margin-top: -6rem;
     }
+
 }
 @media screen and (max-width: 396px) {
     .Footer .FooterList li{
@@ -86,7 +87,7 @@
 }
 @media screen and (max-height:511px) {
     .Footer .FooterPage{
-        margin-top: 5rem;
+        margin-top: 10rem;
     }
 }
 @media screen and (max-height:430px) {
