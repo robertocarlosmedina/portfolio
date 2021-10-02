@@ -15,7 +15,7 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    color: var(--color-text);
+    color: var(--default-color-text);
 }
 .ServicePageConteiner{
     margin-top: 3rem;
@@ -23,12 +23,14 @@
 .ServicesElements li{
     list-style: none;
     display: inline-flex;
-    margin-right: 2rem;
+    margin-right: 3rem;
     margin-bottom: 2rem;
     width: 12rem;
     height:12rem;
     border-radius: 18px;
+    background-color: var(--card-color);
     border: 1px solid var(--object-primary-color);
+    box-shadow: 4px 4px 20px var(--shadow-color);
     padding: 2rem;
     text-align: center;
     overflow: hidden;
@@ -47,7 +49,7 @@
     font-size: 1.22rem;
     text-align: center;
     font-style: bold;
-    color: var(--color-text);
+    color: var(--default-color-text);
 }
 .Sub_conteiner{
     position: relative;
@@ -72,7 +74,7 @@
     z-index: 0;
 }
 .ServicesElements li:hover .OpacityEffect{
-    background:var(--object-primary-color);
+    background:var(--dark);
     opacity: 0.9;
 }
 .SubServices{
@@ -92,7 +94,7 @@
     color: var(--default-color-text);
     width: 13rem;
     margin-left: -1.5rem;
-    margin-top: 0rem;
+    margin-top: -1rem;
 }
 .Projects{
     margin-top: 10rem;

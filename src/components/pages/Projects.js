@@ -16,13 +16,13 @@ const Projects = () =>{
     {
       name:"Voterpy",
       image:Voterpy,
-      desc:"Application that allows the client to poll and control votes related to an election. ",
+      desc:"Application that allows the client to poll and control votes related to an election. And also provide an admin dashboard to control all the poll info.",
       link:"https://github.com/RobertoCarlosMedina/voterpy"
     },
     {
       name:"Minotroll",
       image:Minotroll,
-      desc:"Simple plataform game made using Pygame",
+      desc:"Simple plataform game made using Pygame. The main objective of the game is to get to the end of all the platform levels without dying. The game have some good",
       link:"https://github.com/programmingGames/Minotroll"
     },
     {
@@ -34,7 +34,7 @@ const Projects = () =>{
     {
       name:"Algodata",
       image:Algodata,
-      desc:"Application that allows the client to poll and control votes related to an election. ",
+      desc:"Visual implementation of some Algorithms and data structures. This project has the objective to provide visual explanation of some algorithms.",
       link:"https://github.com/RobertoCarlosMedina/AlgoData"
     },
   ])

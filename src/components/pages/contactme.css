@@ -57,7 +57,7 @@
 }
 .LargeInput{
     width: 25rem;
-    height: 10rem;
+    height: 9rem;
 }
 .ContactForm ul li #Wrong{
     border: 2px solid var(--color-alert);
@@ -67,6 +67,8 @@
 }
 .ContactForm ul li button input{
     background-color: transparent;
+    color: var(--default-color-text);
+    border: 1px solid var(--primary-button-color);
     padding: 0rem;
 }
 .SendMessageButton{
@@ -76,9 +78,8 @@
     text-align: left;
     padding-left: 1rem;
     background-color: var(--primary-button-color);
-    color: var(--color-text);
     box-shadow: -4px 4px 10px var(--shadow-color);
-    border: 1px solid transparent;
+    border: 1px solid var(--primary-button-color);
     border-radius: 8px;
     font-size: .9rem;
     cursor: pointer;
@@ -91,9 +92,10 @@
     color: var(--default-color-text);
     transition: transform .5s ease;
 }
-.SendMessageButton:hover{
-    color: var(--color-text-1);
-    border: 1px solid  var(--object-primary-color);
+.ContactForm .SendMessageButton:hover input,
+.ContactForm .SendMessageButton:hover{
+    color: var(--object-secundary-color);
+    border: 1px solid var(--default-text-color);
 }
 .SendMessageButton:hover .SendIcon{
     color: var(--default-color-text);

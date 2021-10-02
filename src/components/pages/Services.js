@@ -21,6 +21,9 @@ const Services = () =>{
           name:"Web App Design"
         },
         {
+          name:"Website Design"
+        },
+        {
           name:"Responsive Design"
         }
       ]
@@ -36,6 +39,9 @@ const Services = () =>{
           name:"API Management"
         },
         {
+          name:"API development"
+        },
+        {
           name:"Agility and flexibility"
         }
       ]
@@ -49,6 +55,12 @@ const Services = () =>{
         },
         {
           name:"Verssion Control"
+        },
+        {
+          name:"Website development"
+        },
+        {
+          name:"Web App development"
         },
         {
           name:"Agility and flexibility"
@@ -67,6 +79,9 @@ const Services = () =>{
         },
         {
           name:"System Analyst"
+        },
+        {
+          name:"API test"
         }
       ]
     }

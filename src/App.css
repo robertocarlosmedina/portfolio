@@ -15,6 +15,7 @@
   border: 1px solid var(--color-text);
   transition: border .2s ease-in-out;
   cursor: pointer;
+  box-shadow: 1px 1px 5px var(--default-shadow-color);
   
 }
 .PersonalLogoIn{

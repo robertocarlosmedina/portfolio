@@ -23,7 +23,7 @@
     text-align: left;
     list-style: none;
     cursor: pointer;
-    padding: 1rem;
+    padding: 1.2rem;
 }
 .ProjectsConteiner .ProjectCard li .Card img{
     width: 16rem;
