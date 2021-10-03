@@ -114,8 +114,12 @@
 /* Media querys */
 
 @media screen and (max-width: 873px) {
+    .AboutmeConteiner .Conteiner-1{
+        box-shadow: none;
+    }
     .AboutMe{
         background-color: var(--conteiner-color);
+        box-shadow: 4px 4px 20px var(--shadow-color);
     }
     .AboutMe .Title h1{
         color: var(--default-color-text);
@@ -269,7 +273,7 @@
          display: none;
      }
      .AboutmeConteiner  .CVDownloader{
-        margin-top: 5vh;
+        margin-top: 10vh;
         margin-left: 143%;
     }  
     @media screen and (max-height: 480px) {
@@ -306,13 +310,13 @@
          margin-left: 135%;
      }
     .AboutmeConteiner  .CVDownloader{
-        margin-top: 5vh;
-        margin-left: 155%;
+        margin-top: 10vh;
+        margin-left: 148%;
     }
 }
 @media screen and (max-width: 245px) {
     .AboutmeConteiner  .CVDownloader{
-        margin-top: 5vh;
+        margin-top: 10vh;
         margin-left: 150%;
     }
 }

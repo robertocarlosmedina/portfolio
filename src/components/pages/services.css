@@ -157,7 +157,11 @@
     }
     @media screen and (max-height: 364px) {
         .ServicePageConteiner{
-            margin-top:-4rem;
+            margin-top:2rem;
+            /* margin-left: -3rem; */
+        }
+        .ServicesElements li{
+            margin-left: -3rem;
         }
         .Projects{
             margin-top: 50rem;
