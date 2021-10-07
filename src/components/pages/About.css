@@ -53,10 +53,10 @@
 }
 .AboutmeConteiner .AboutmeImage{
     /* position:absolute; */
-    width: 25rem;
-    height: 25rem;
+    width: 290px;
+    height: 434px;
     bottom: -3rem;
-    margin-top: -7rem;
+    margin-top: -9.12rem;
     margin-left: -29rem;
 }
 .AboutmeConteiner .AboutStatistic{
@@ -179,7 +179,7 @@
         font-size: 2rem;
     }
     .AboutmeConteiner .AboutmeImage{
-        width: 14rem;
+        width: 13rem;
         height: 14rem;
         margin-top: 4.64rem;
         /* bottom: 0; */

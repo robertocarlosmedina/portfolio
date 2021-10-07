@@ -1,7 +1,7 @@
 import React from 'react'
 import { FiDownload } from 'react-icons/fi'
 
-import ProfileImage from '../../assets/images/perfil.png'
+import ProfileImage from '../../assets/images/frontImg.png'
 import CVFile from '../../assets/files/Curriculum_ Roberto_Medina.pdf'
 
 import './About.css'

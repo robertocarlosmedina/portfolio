@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-scroll'
 import { MdArrowForward } from 'react-icons/md'
 
-import ProfileImage from '../../assets/images/perfil.png'
+import SponcerImage from '../../assets/images/sponcerImg.png'
 
 import './publicity.css'
 
@@ -23,7 +23,7 @@ const Publicity = () =>{
                   <MdArrowForward className="ForwardIcon-1"/>
                 </button>
               </Link>
-              <img src={ProfileImage} 
+              <img src={SponcerImage} 
                    alt="profile" 
                    className="AboutmeImage"
               />
