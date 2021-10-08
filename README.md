@@ -1,19 +1,22 @@
-# Getting Started with Create React App
+<div align=center>
+  <h1>Getting Started with Create React App</h1>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Notification
+<h1>Notification</h1>
 
-This is just a repo where do I post my portfolio to the Github page.
-The oficial main repo of the portfolio is a private one, but if you wanna know how did I do it,
-using Reactjs, get in  touch and ask your questions.
+This is a repo where do I post my portfolio to the Github page.
 
-## Helper
+<h1>Helper</h1>
 
 If you find any error in the portfolio page, report it to me please.
 I will appreciate that.
 
-## Visite my portfolio
-<a href="#">
-  Portfolio
+<h1>Visit my portfolio</h1>
+<a href="https://robertocarlosmedina.github.io/portfolio/">
+  <img src="https://github.com/robertocarlosmedina/portfolio/blob/main/assets/Group%20127.png" alt="Portfolio icon" height=70 />
 </a>
+ </div>
+ 
+<h1>Copyright</h1>
+©Copyright 2021 Roberto Carlos
