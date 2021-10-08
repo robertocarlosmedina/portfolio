@@ -1,7 +1,6 @@
 .Services{
     width: 100%;
     height: 100vh;
-    font-family: 'Ubuntu', 'Serif';
     margin-top: -2rem;
     background-color: var(--dark-background);
 }

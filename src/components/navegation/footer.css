@@ -1,8 +1,6 @@
 .Footer{
     width: 100%;
-    font-family: 'Ubuntu', 'Serif';
     color: var(--default-color-text);
-    
 }
 .Footer .FooterPage{
     position: absolute;
