@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 <h1>Notification</h1>
 
-This is a repo where do I post my portfolio to the Github page.
+This is a repo where do I post my portfolio to the Github page, and also the for the source code used to the portfolio.
 
 <h1>Helper</h1>
 
