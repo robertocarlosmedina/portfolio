@@ -14,9 +14,11 @@ I will appreciate that.
 
 <h1>Visit my portfolio</h1>
 <a href="https://robertocarlosmedina.github.io/portfolio/">
-  <img src="https://github.com/robertocarlosmedina/portfolio/blob/main/assets/Group%20127.png" alt="Portfolio icon" height=70 />
+  <img src="https://github.com/robertocarlosmedina/portfolio/blob/main/assets/Group%20129.png" alt="Portfolio icon" height=70 />
 </a>
- </div>
- 
+  
 <h1>Copyright</h1>
 ©Copyright 2021 Roberto Carlos
+
+ </div>
+ 
