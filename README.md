@@ -10,7 +10,7 @@ using Reactjs, get in  touch and ask your questions.
 
 ## Helper
 
-if you find any error in the portfolio page, report it to me.
+If you find any error in the portfolio page, report it to me please.
 I will appreciate that.
 
 ## Visite my portfolio
