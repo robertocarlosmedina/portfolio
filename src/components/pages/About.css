@@ -232,6 +232,9 @@
         width: 16rem;
         margin-left: 95%;
     }   
+    .AboutmeConteiner .AboutmeImage{
+        visibility:hidden;
+    }
 }
 @media screen and (max-width: 395px) {
     .AboutmeConteiner .Conteiner-1 .AboutText{
