@@ -9,7 +9,7 @@ This is a repo where do I post my portfolio to the Github page, and also the for
 
 <h1>Helper</h1>
 
-If you find any error in the portfolio page, report it to me please.
+If you find any error in the my portfolio, report it to me please.
 I will appreciate that.
 
 <h1>Visit my portfolio</h1>
