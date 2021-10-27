@@ -121,7 +121,7 @@ const Header = (props) =>{
     setOpenMenu("none")
   }
   const goToLink = (link) =>{
-    history.push(`/#${link}`)
+    history.push(`portfolio/#${link}`)
   }
   // Controlin y on the windows
   const addNavbarBorder = () =>{

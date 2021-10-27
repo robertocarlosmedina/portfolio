@@ -75,7 +75,7 @@ function App() {
     // console.log(theme)
   }
   const changePath = () =>{
-    history.push("/")
+    history.push("/portfolio")
   }
 
   window.addEventListener('scroll', addPersonalIcon)
