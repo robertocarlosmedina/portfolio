@@ -152,8 +152,10 @@
     margin-top: 84vh;
     color: var(--object-primary-color);
     animation: scroolAnimatedIcon infinite 0.5s linear;
-    cursor: pointer;
     text-align: center;
+}
+#iconScroll {
+    cursor: pointer;
 }
 .ScrollShow #iconScroll{
     width: 2.5rem;

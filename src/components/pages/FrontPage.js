@@ -72,11 +72,13 @@ const FrontPage = () =>{
               ))}
             </ul>
           </div>
-          <Link to="AboutMe" smooth={true} duration={1000}>
-            <div className="ScrollShow">
-              <BiMouse id="iconScroll"/>
-            </div>
-          </Link>
+          <div className="ScrollShow">
+            <Link to="AboutMe" smooth={true} duration={1000}>
+              <p>
+                <BiMouse id="iconScroll"/>
+              </p>
+            </Link>
+          </div>
       </div>
     )
 }
