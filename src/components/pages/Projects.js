@@ -1,54 +1,19 @@
-import  {React, useState} from "react";
+import  {React} from "react";
 import { MdArrowForward } from 'react-icons/md'
-
-
-import Publicity from "./Publicity";
-
-import Voterpy from '../../assets/images/painel/voterpy.png'
-import Algodata from '../../assets/images/painel/algodata.png'
-import Minotroll from '../../assets/images/painel/minotroll.png'
-import Gitenk from '../../assets/images/painel/gitenk.png'
 
 import './projects.css'
 
-const Projects = () =>{
-  const [projects] = useState([
-    {
-      name:"Voterpy",
-      image:Voterpy,
-      desc:"Application that allows the client to poll and control votes related to an election. And also provide an admin dashboard to control all the poll info.",
-      link:"https://github.com/RobertoCarlosMedina/voterpy"
-    },
-    {
-      name:"Minotroll",
-      image:Minotroll,
-      desc:"Simple plataform game made using Pygame. The main objective of the game is to get to the end of all the platform levels without dying. The game have some good",
-      link:"https://github.com/programmingGames/Minotroll"
-    },
-    {
-      name:"Gitenk",
-      image:Gitenk,
-      desc:"Gitenk is a Debian package that allows you to access GitHub features by local Terminal using a GitHub token provide and maintained by the user, ",
-      link:"https://github.com/RobertoCarlosMedina/gitenk"
-    },
-    {
-      name:"Algodata",
-      image:Algodata,
-      desc:"Visual implementation of some Algorithms and data structures. This project has the objective to provide visual explanation of some algorithms.",
-      link:"https://github.com/RobertoCarlosMedina/AlgoData"
-    },
-  ])
-
+const Projects = (props) =>{
 
   return(
     <div className="Projects" id="Projects">
       <div className="Title">
         <h1>Projects</h1>
-        <h2>What I have made</h2>
+        <h2>{props.subtitle}</h2>
       </div>
       <div className="ProjectsConteiner">
           <ul className="ProjectCard">
-            {projects.map((project, i) =>
+            {props.projects.map((project, i) =>
             <li key={i}>
               <div className="Card">
                 <span className="OpacityEffect"></span>
@@ -71,7 +36,6 @@ const Projects = () =>{
             )}
           </ul>
       </div>
-      <Publicity />
     </div>
   )
 }

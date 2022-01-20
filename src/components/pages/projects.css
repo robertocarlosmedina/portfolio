@@ -75,8 +75,7 @@
 }
 .ProjectCard .Card div h1{
     margin-top: -14rem;
-    margin-left: -11rem;
-
+    margin-left: -15rem;
     transition: transform 1s ease-in-out;
     z-index: 4;
 }
@@ -93,7 +92,7 @@
 }
 .ProjectCard  li:hover  h1{
     color: var(--default-color-text);
-    transform: translateX(12.5rem);
+    transform: translateX(16.5rem);
 } 
 .ProjectsConteiner .ProjectCard li:hover div p{
     transform: translateX(15.5rem);

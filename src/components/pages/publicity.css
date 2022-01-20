@@ -2,7 +2,7 @@
     position:absolute;
     width: 100%;
     margin-top: 70rem;
-    margin-bottom: 100vh;
+    margin-bottom: 0;
     background-color: var(--dark-background);
 }
 .GetInTouch{
