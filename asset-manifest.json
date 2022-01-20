@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.633e7f3f.chunk.css",
+    "main.js": "/portfolio/static/js/main.677eb81b.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.677eb81b.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.8feae1f3.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.8feae1f3.js.map",
+    "static/js/2.0203edf3.chunk.js": "/portfolio/static/js/2.0203edf3.chunk.js",
+    "static/js/2.0203edf3.chunk.js.map": "/portfolio/static/js/2.0203edf3.chunk.js.map",
+    "static/js/3.5ab3ce94.chunk.js": "/portfolio/static/js/3.5ab3ce94.chunk.js",
+    "static/js/3.5ab3ce94.chunk.js.map": "/portfolio/static/js/3.5ab3ce94.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/main.633e7f3f.chunk.css.map": "/portfolio/static/css/main.633e7f3f.chunk.css.map",
+    "static/js/2.0203edf3.chunk.js.LICENSE.txt": "/portfolio/static/js/2.0203edf3.chunk.js.LICENSE.txt",
+    "static/media/Curriculum_ Roberto_Medina.fc5e98bd.pdf": "/portfolio/static/media/Curriculum_ Roberto_Medina.fc5e98bd.pdf",
+    "static/media/casacelestina.b9e74605.png": "/portfolio/static/media/casacelestina.b9e74605.png",
+    "static/media/cvbooking.249499d1.png": "/portfolio/static/media/cvbooking.249499d1.png",
+    "static/media/frontImg.6f663940.png": "/portfolio/static/media/frontImg.6f663940.png",
+    "static/media/frontImg1.10c1be47.png": "/portfolio/static/media/frontImg1.10c1be47.png",
+    "static/media/minotroll.b12ef44e.png": "/portfolio/static/media/minotroll.b12ef44e.png",
+    "static/media/personal.a4c4988d.png": "/portfolio/static/media/personal.a4c4988d.png",
+    "static/media/portfolio.a21a3bca.png": "/portfolio/static/media/portfolio.a21a3bca.png",
+    "static/media/sponcerImg.e74bdc0d.png": "/portfolio/static/media/sponcerImg.e74bdc0d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8feae1f3.js",
+    "static/js/2.0203edf3.chunk.js",
+    "static/css/main.633e7f3f.chunk.css",
+    "static/js/main.677eb81b.chunk.js"
+  ]
+}
